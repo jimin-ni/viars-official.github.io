@@ -4,61 +4,54 @@
 .title1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 30px;
 }
 
 /* title2 */
 .title2 {
   font-family: 'Noto Serif KR', serif;
   font-weight: 600;
-  font-size: 32px;
+  font-size: 30px;
 }
 
 /* subtitle2 */
 .title3 {
   font-family: 'Noto Serif', sans-serif;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 /* subtitle1 */
 .subtitle1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 /* subtitle2 */
 .subtitle2 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* text1 */
 .text1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 /* text2 */
 .text2 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 200;
-  font-size: 13px;
+  font-size: 11px;
 }
 
 /* text3 */
 .text3 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
-  font-size: 14px;
-}
-
-/* buttontext1 */
-.buttontext1 {
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 600;
-  font-size: 16px;
+  font-size: 12px;
 }

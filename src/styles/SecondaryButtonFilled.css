@@ -1,10 +1,10 @@
-.primaryFilled {
+.SecondaryButton {
     width: 88%;   /* 모바일 비율 */
     height: 52px;       /* 세로 고정 */
     padding: 0;
     border-radius: 100px;
-    background-color: #597CF8;
-    color: white;
+    background-color: #e65757;
+    color: #000000;
     font-family: 'Noto Sans KR', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -14,25 +14,27 @@
   }
   
 @media (min-width: 413px) {
-  .primaryFilled {
+  .SecondaryButton {
     width: 364px;  /* PC 이상에서는 고정 */
   }
 }
 
   /* 클릭 시 0.5초 hover 느낌 */
-.primaryFilled.clicked {
-    background-color: #2A59FF;
-}
+  .SecondaryButton.clicked {
+    background-color: #787878;
+    color: white;
+  }
   
   /* 클릭 후 활성화 상태 */
-.primaryFilled.activated {
-    background-color: #5269BC;
-    color: #8FA8FF;
-}
+  .SecondaryButton.activated {
+    background-color: #FFFBFB;
+    color: #000000;
+  }
   
   /* 비활성화 상태 */
-.primaryFilled.disabled {
-    background-color: #ccc;
-    color: #666;
+  .SecondaryButton.disabled {
+    background-color: #FFFBFB;
+    color: #787878;
     cursor: not-allowed;
-}
+  }
+  

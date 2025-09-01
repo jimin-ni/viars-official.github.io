@@ -1,0 +1,106 @@
+/* src\styles\ArtPersonalityTest.css */
+
+/* 상단 Navbar 고정 */
+.art-navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 412px; /* 모바일 화면 폭 고정 */
+  z-index: 100;
+}
+
+/* Art Personality Test 컨테이너 */
+.art-test-container {
+  position: relative;
+  padding-top: 60px; /* Navbar 높이만큼 여백 확보 */
+  width: 100%;        /* index.css에서 max-width 412px 적용됨 */
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+    align-items: center; 
+
+}
+
+/* 상단 진행도 */
+.art-progress {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: 20px;
+  gap: 8px;
+}
+
+.art-progress-number {
+  font-size: 32px;
+  color: #000;
+}
+
+.art-progress-text {
+  font-size: 16px;
+  color: #908f8f;
+}
+
+.art-progress-percent {
+  color: #849bf0;
+}
+
+/* 질문 텍스트 */
+.art-question {
+  margin: 20px 16px 0;
+  font-size: 24px;
+  line-height: 1.3;
+  color: #000;
+}
+
+/* 이미지와 설명 박스 */
+.art-image-box {
+  position: relative;
+  width: 100%;
+  height: 412px;
+  background-color: #f5f0f0;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.art-image-box-top {
+  margin-top: 20px;
+}
+
+.art-image-box-bottom {
+  margin-top: 30px;
+}
+
+.art-image-description {
+  position: absolute;
+  top: 13px;
+  left: 62px;
+  font-size: 16px;
+  color: #000;
+}
+
+.art-image {
+  width: 92%; /* 이미지 가로 크기 조절 */
+  height: auto; /* 비율 유지 */
+  object-fit: cover;
+  margin-top: 80px; /* 이미지 위치 조정 */
+}
+
+/* 라디오 버튼 */
+.art-radio {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+}
+
+/* 다음 버튼 */
+.art-next-button {
+  /* position: fixed; */
+  z-index: 1;  
+  width: 100%;          /* ✅ 부모 컨테이너가 화면 너비 전체를 차지 */
+  display: flex;        /* 버튼을 중앙에 두려면 flex 사용 */
+  justify-content: center;   /* 가로 중앙 정렬 */
+  margin: auto auto 10vh auto;
+}

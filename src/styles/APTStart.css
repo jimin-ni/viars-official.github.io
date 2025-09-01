@@ -1,31 +1,33 @@
+/* src\styles\APTStart.css */
+
 .background {
-    position: relative;     
-    display: flex;
-    flex-direction: column;
-    align-items: center;       /* 가로 중앙 */
-    height: 100vh;             /* 화면 전체 높이 기준 */
-  }
-  
-  .textbox1 {
-    z-index: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;       /* 텍스트 가로 중앙 */
-    text-align: center;
-    margin-top: 15vh;         /* 화면 상단에서 띄우기 */
-  }
-  
-.buttonbox1 {
-    z-index: 1;  
-    margin-top: auto;
-    margin-bottom: 0vh;       /* 화면 맨 아래에서 띄우기 */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
 }
 
-  .Button1 {
+.textbox1 {
+  flex: 0;                /* 고정 높이, 위에만 배치 */
+  margin-top: 8vh;        /* 필요시 여백 */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  }
+.buttonbox1 {
+  width: 100%;            
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 40px; 
+  margin: auto 0 10vh 0; /* 세로 중앙 + 아래 여백 */
+}
 
-  .Button2 {
-    margin-top: 40px;
-    margin-bottom: 60px;
-  }
+.Button1,
+.Button2 {
+  margin: 0; /* wrapper에서 margin 제거 */
+  width: 100%; /* wrapper는 부모 폭 그대로 */
+  display: flex;
+  justify-content: center; /* 버튼을 중앙 정렬 */
+}

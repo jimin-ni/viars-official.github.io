@@ -25,8 +25,12 @@
   object-fit: contain;
 }
 
+
+ /* 버튼이 들어가는 모든 페이지에 작성 필요 - 비율 유지 */
 .LandingButton {
   z-index: 1;  
-  margin-top: auto;
-  margin-bottom: 10vh;       /* 화면 맨 아래에서 띄우기 */
+  width: 100%;          /* ✅ 부모 컨테이너가 화면 너비 전체를 차지 */
+  display: flex;        /* 버튼을 중앙에 두려면 flex 사용 */
+  justify-content: center;   /* 가로 중앙 정렬 */
+  margin: auto auto 10vh auto;
 }

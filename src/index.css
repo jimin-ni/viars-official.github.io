@@ -1,6 +1,7 @@
-/* 브라우저 전체 배경은 회색 */
+/* src\index.css */
+
 body {
-  background-color: #f2f2f2;
+  background-color: #f2f2f2; /* 브라우저 전체 배경은 회색 */
   display: flex;
   justify-content: center;   /* 화면 중앙에 모바일 박스 위치 */
   /* align-items: center;       세로도 중앙 배치 (선택사항) */

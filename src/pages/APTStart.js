@@ -1,3 +1,5 @@
+// src\pages\APTStart.js
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import '../styles/APTStart.css'; 
@@ -11,7 +13,7 @@ function APTStart() {
   const handleClick = () => {
     // PrimaryButton 시간을 고려해 액션 끝난 뒤 이동
     setTimeout(() => {
-      navigate("/apt-ongoing");
+      navigate("/aptOngoing");
     }, 900); // 0.9초
   };
 
