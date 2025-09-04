@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import APTData from "../data/APTData";
-import '../styles/APTOngoing.css'; 
+// import '../styles/APTOngoing.css'; 
 import { ArtPersonalityTest } from "../components/ArtPersonalityTest";
 import { useNavigate } from "react-router-dom";
 import resultMap from "../data/ResultMap";
@@ -35,6 +35,9 @@ export default function APTOngoing() {
       selectedAnswer={answers[currentIndex]}
       onSelect={handleSelect}
       onNext={handleNext}
+      currentStep={currentIndex + 1}   // ✅ 현재 문제 번호 전달
+      totalSteps={APTData.length}      // ✅ 전체 문제 수 전달
     />
+
   );
 }
