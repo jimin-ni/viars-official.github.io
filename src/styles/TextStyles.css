@@ -1,55 +1,53 @@
 /* src/styles/textStyles.css */
 
-/* title1 */
 .title1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 600;
   font-size: 30px;
 }
 
-/* title2 */
 .title2 {
   font-family: 'Noto Serif KR', serif;
   font-weight: 600;
   font-size: 30px;
 }
 
-/* subtitle2 */
 .title3 {
-  font-family: 'Noto Serif', sans-serif;
+  font-family: 'Noto Serif', serif;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 30px;
 }
 
-/* subtitle1 */
 .subtitle1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
   font-size: 22px;
 }
 
-/* subtitle2 */
 .subtitle2 {
+  font-family: 'Noto Serif', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.subtitle3 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
   font-size: 18px;
 }
 
-/* text1 */
 .text1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
   font-size: 14px;
 }
 
-/* text2 */
 .text2 {
   font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 200;
+  font-weight: 350;
   font-size: 11px;
 }
 
-/* text3 */
 .text3 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;

@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import APTData from "../data/APTData";
-// import '../styles/APTOngoing.css'; 
 import { ArtPersonalityTest } from "../components/ArtPersonalityTest";
 import { useNavigate } from "react-router-dom";
-import resultMap from "../data/ResultMap";
+import resultMap from "../data/resultMap";
 
 export default function APTOngoing() {
   const [currentIndex, setCurrentIndex] = useState(0);
