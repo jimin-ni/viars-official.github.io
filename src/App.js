@@ -31,16 +31,18 @@ function App() {
       <Route path="/aptStart" element={<APTStart />} />
       {/* Art Personality Test - Ongoing 페이지 */}
       <Route path="/aptOngoing" element={<APTOngoing />} />
-      {/* 로그인 후 홈 페이지 */}
+      {/* 홈 페이지 */}
       <Route path="/home" element={<Home />} />
       {/* Docent 도슨트 페이지 */}
       <Route path="/docent" element={<Docent />} />
-      {/* 로그인 후 홈 페이지 */}
+      {/* Market 마켓 페이지 */}
       <Route path="/market" element={<Market />} />
-      {/* 로그인 후 홈 페이지 */}
+      {/* Article 아티클 페이지 */}
       <Route path="/article" element={<Article />} />
-      {/* 로그인 후 홈 페이지 */}
+      {/* MyPage 마이 페이지 */}
       <Route path="/myPage" element={<MyPage />} />
+      {/* APTResult 테스트 결과 페이지 */}
+      <Route path="/result/:type" element={<APTResult />} />
     </Routes>
   </BrowserRouter>
   );

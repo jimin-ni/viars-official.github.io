@@ -3,53 +3,56 @@
 .title1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: clamp(18px, calc(30 / 412 * 100vw), 30px);
 }
 
 .title2 {
   font-family: 'Noto Serif KR', serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: clamp(18px, calc(30 / 412 * 100vw), 30px);
 }
 
 .title3 {
   font-family: 'Noto Serif', serif;
   font-weight: 600;
-  font-size: 30px;
+  font-size: clamp(18px, calc(30 / 412 * 100vw), 30px);
 }
 
 .subtitle1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 500;
-  font-size: 22px;
+  font-size: clamp(16px, calc(22 / 412 * 100vw), 22px);
+
 }
 
 .subtitle2 {
   font-family: 'Noto Serif', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: clamp(14px, calc(18 / 412 * 100vw), 18px);
+
 }
 
 .subtitle3 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
-  font-size: 18px;
+  font-size: clamp(14px, calc(18 / 412 * 100vw), 18px);
 }
 
 .text1 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 400;
-  font-size: 14px;
+  font-size: clamp(12px, calc(14 / 412 * 100vw), 14px);
 }
 
 .text2 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 350;
-  font-size: 11px;
+  font-size: clamp(10px, 2.67vw, 11px); /* 11px → 2.67vw */
+  font-size: clamp(10px, calc(11 / 412 * 100vw), 11px);
 }
 
 .text3 {
   font-family: 'Noto Sans KR', sans-serif;
   font-weight: 300;
-  font-size: 12px;
+  font-size: clamp(10px, calc(12 / 412 * 100vw), 12px);
 }

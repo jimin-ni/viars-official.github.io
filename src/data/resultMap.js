@@ -1,4 +1,5 @@
-//   APTOngoing.js에서 사용자가 선택한 10문항의 answers 배열과 각 유형의 pattern을 비교
+//   src\data\ResultMap.js
+// pattern은 대표 패턴 예시. 실제 응답은 가장 가까운 pattern으로 매칭됨.
 
 const resultMap = [
     { type: "EADC", pattern: [0,1,1,0,0,1,0,1,0,0] },

@@ -1,0 +1,138 @@
+/* src\styles\APTResult.css */
+
+.apt-result {
+  max-width: 412px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.apt-result__intro {
+  text-align: center;
+  margin: 90px 0;
+}
+
+.textDescription {
+  width: 350px;
+  margin: 20px auto;
+}
+
+.apt-result__image img {
+  width: clamp(300px, 780vw, 375px);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.apt-result__section {
+  background-color: #f0f0f0;
+  padding: 16px;
+  margin-top: 16px;
+}
+
+.apt-result__type h3 {
+  margin-bottom: 8px;
+}
+
+.apt-result__icons {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px 0;
+}
+
+.apt-result__icons img {
+  width: 84px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.apt-result__traits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.apt-result__traits img {
+  width: 364px;
+  height: 134px;
+  object-fit: cover;
+}
+
+.apt-result__exhibition {
+  margin-top: 24px;
+}
+
+.exhibition-card {
+  display: flex;
+  width: 364px;
+  height: 190px;
+  margin: 0 auto 12px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.exhibition-card img {
+  width: 132;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 10%;
+}
+
+.exhibition-info {
+  flex: 1;
+  padding: 12px;
+  text-align: left;
+}
+
+.tags {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.tag {
+  border: 2px solid #1D2087;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #1D2087;
+}
+
+.apt-result__artists {
+  margin-top: 24px;
+  padding: 0 12px;
+}
+
+.artist-card {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.artist-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+.btn-outlined {
+  display: block;
+  width: 100%;
+  max-width: 364px;
+  margin: 12px auto;
+  padding: 10px;
+  border: 1px solid #333;
+  background: #fff;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.share-btn {
+  margin-top: 24px;
+}
