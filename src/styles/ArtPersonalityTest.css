@@ -88,7 +88,6 @@
   flex-direction: column;
   align-items: center;
   font-weight: 400;
-
 }
 
 .art-image-box-top {
@@ -105,7 +104,8 @@
   left: 62px;
   font-size: 16px;
   color: #000;
-  width: 326px;
+  width: 100%;
+  max-width: 314px;
 }
 
 .art-image {
@@ -120,6 +120,8 @@
   position: absolute;
   top: 24px;
   left: 24px;
+
+  
 }
 
 /* 다음 버튼 */
@@ -130,4 +132,37 @@
   display: flex;        /* 버튼을 중앙에 두려면 flex 사용 */
   justify-content: center;   /* 가로 중앙 정렬 */
   margin: 30vh ;
+}
+
+/* 팝업 창 */
+.popup-message {
+  position: fixed;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  opacity: 0.9;
+  z-index: 1000;
+  animation: fadeInOut 2s ease forwards;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  font-size: clamp(16px, calc(20 / 412 * 100vw), 20px);
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, 20px); }
+  10% { opacity: 0.9; transform: translate(-50%, 0); }
+  90% { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(-50%, 20px); }
+}
+
+/* 반응형 */
+@media (max-width: 412px) {
+  .art-image-description {
+    width: 300px;
+  }
 }

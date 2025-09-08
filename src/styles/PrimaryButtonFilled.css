@@ -13,7 +13,7 @@
     transition: all 0.5s ease;
   }
   
-@media (min-width: 413px) {
+@media (min-width: 412px) {
   .primaryFilled {
     width: 364px;  /* PC 이상에서는 고정 */
   }

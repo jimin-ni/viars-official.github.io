@@ -5,13 +5,20 @@ import SecondaryButton from "./SecondaryButton";
 import "../styles/ArtPersonalityTest.css";
 import { APTTestNavbar } from "./APTTEstNavbar";
 
+export const ArtPersonalityTest = ({  
+  question, 
+  onNext, 
+  onSelect, 
+  selectedAnswer, 
+  currentStep, 
+  totalSteps  
+}) => {
+  const [elapsed, setElapsed] = useState(0); // 초 단위 저장
+  const [showPopup, setShowPopup] = useState(false); // 팝업 상태
 
-export const ArtPersonalityTest = ({  question, onNext, onSelect, selectedAnswer, currentStep, totalSteps  }) => {
-    const [elapsed, setElapsed] = useState(0); // 초 단위 저장
-
-    useEffect(() => {
+  useEffect(() => {
     const timer = setInterval(() => setElapsed(prev => prev + 1), 1000);
-    return () => clearInterval(timer); // 언마운트 시 정리
+    return () => clearInterval(timer); 
   }, []);
 
   // HH:MM:SS 포맷팅
@@ -20,6 +27,16 @@ export const ArtPersonalityTest = ({  question, onNext, onSelect, selectedAnswer
     const m = String(Math.floor((s % 3600) / 60)).padStart(2, "0");
     const sec = String(s % 60).padStart(2, "0");
     return `${h}:${m}:${sec}`;
+  };
+
+  // 다음 버튼 핸들러
+  const handleNextClick = () => {
+    if (selectedAnswer === null || selectedAnswer === undefined) {
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 2000); // 2초 후 사라짐
+      return;
+    }
+    onNext(); // 정상적으로 다음으로 이동
   };
 
   return (
@@ -37,7 +54,7 @@ export const ArtPersonalityTest = ({  question, onNext, onSelect, selectedAnswer
             / 10 문항 (<span className="art-progress-percent">{question.linePercent}</span>%)
           </p>
         </div>
-        <div className="art-timer">{formatTime(elapsed)}</div> {/* ✅ 타이머 */}
+        <div className="art-timer">{formatTime(elapsed)}</div>
       </div>
 
       {/* 질문 텍스트 */}
@@ -45,7 +62,8 @@ export const ArtPersonalityTest = ({  question, onNext, onSelect, selectedAnswer
 
       {/* 이미지와 설명 */}
       {question.images.map((img, idx) => (
-        <div  key={idx}
+        <div  
+          key={idx}
           className={`art-image-box ${idx === 0 ? "art-image-box-top" : "art-image-box-bottom"}`}>
           <input
             type="radio"
@@ -59,12 +77,20 @@ export const ArtPersonalityTest = ({  question, onNext, onSelect, selectedAnswer
             src={img.src}
             alt={`Option ${idx + 1}`}
           />
-
         </div>
       ))}
 
       {/* 다음 버튼 */}
-      <SecondaryButton className="art-next-button" text="다음" onClick={onNext} />
+      <SecondaryButton 
+        className="art-next-button" 
+        text="다음" 
+        onClick={handleNextClick} 
+      />
+
+      {/* 선택 안 했을 때 팝업 */}
+      {showPopup && (
+        <div className="popup-message">선택지를 골라주세요.</div>
+      )}
     </div>
   );
 };

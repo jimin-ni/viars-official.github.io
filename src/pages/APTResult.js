@@ -1,25 +1,38 @@
-// src/pages/APTResult.js
-import React from "react";
+// src/pages/APTResult.jsimport React, { useState } from "react";
+
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import APTResultData from "../data/APTResultData";
 import { useNavigate } from "react-router-dom";
 import { APTTestNavbar } from "../components/APTTEstNavbar";
 import "../styles/APTResult.css";
 import PrimaryButton from "../components/PrimaryButton";
-
+import PrimaryButtonOuntlined from "../components/PrimaryButtonOuntlined";
 
 function APTResult() {
   const navigate = useNavigate();
   const { type } = useParams();
   const result = APTResultData[type];
+  const [showPopup, setShowPopup] = useState(false);
 
   if (!result) return <div>결과 데이터를 불러올 수 없습니다.</div>;
 
   const handleClick = () => {
-    // PrimaryButton 시간을 고려해 액션 끝난 뒤 이동
     setTimeout(() => {
       navigate("/Home");
-    }, 900); //  0.9초
+    }, 900);
+  };
+
+  // ✅ 공유 버튼 클릭 시 실행
+  const handleShare = async () => {
+    try {
+      const url = window.location.href; // 현재 페이지 URL
+      await navigator.clipboard.writeText(url); // 클립보드 복사
+      setShowPopup(true);
+      setTimeout(() => setShowPopup(false), 2000); // 2초 후 사라짐
+    } catch (err) {
+      console.error("URL 복사 실패:", err);
+    }
   };
 
   return (
@@ -79,10 +92,11 @@ function APTResult() {
                 </span>
               ))}
             </div>
-            <h4>{result.exhibition.title}</h4>
-            <p>{result.exhibition.location}</p>
-            <p>{result.exhibition.date}</p>
-
+            <div className="exhibition_textbox">
+              <p className="subtitle4">{result.exhibition.title}</p>
+              <p className="text4">{result.exhibition.location}</p>
+              <p className="text1">{result.exhibition.date}</p>
+            </div>
           </div>
         </div>
         <PrimaryButton
@@ -98,10 +112,10 @@ function APTResult() {
         {result.artists.map((artist, i) => (
           <div key={i} className="artist-card">
             <img src={artist.image} alt={artist.name} />
-            <div>
-              <h4>{artist.name}</h4>
-              <p>{artist.info}</p>
-              <p>{artist.intro}</p>
+            <div className="artist_textbox">
+              <p className="subtitle4">{artist.name}</p>
+              <p className="text4">{artist.info}</p>
+              <p className="text1">{artist.intro}</p>
             </div>
           </div>
         ))}
@@ -112,7 +126,16 @@ function APTResult() {
       </section>
 
       {/* ✅ 공유 버튼 */}
-      <button className="btn-outlined share-btn">검사 결과 공유하기</button>
+      <PrimaryButtonOuntlined
+        className="ButtonOuntlined"
+        text="검사 결과 공유하기" 
+        onClick={handleShare} 
+      /> 
+
+      {/* ✅ 주소 복사 팝업 */}
+      {showPopup && (
+        <div className="popup-message">주소가 복사되었습니다</div>
+      )}
     </div>
   );
 }

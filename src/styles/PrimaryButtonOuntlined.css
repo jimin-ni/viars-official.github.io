@@ -13,7 +13,7 @@
     transition: all 0.5s ease;
   }
 
-@media (min-width: 413px) {
+@media (min-width: 412px) {
   .primaryOuntlined {
     width: 364px;  /* PC 이상에서는 고정 */
   }
@@ -23,14 +23,14 @@
 .primaryOuntlined.clicked {
     background-color: #2A59FF;
     color: white;
-    border: none;
+    border: 2px solid white;
 }
   
   /* 클릭 후 활성화 상태 */
 .primaryOuntlined.activated {
     background-color: white;
     color: #8FA8FF;
-    border: #8FA8FF 2px;
+    border: 2px solid #8FA8FF;
 }
   
   /* 비활성화 상태 */
