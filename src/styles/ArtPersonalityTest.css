@@ -28,7 +28,7 @@
   align-items: flex-end;
   width: 100%;
   max-width: 412px;
-  padding: 0 16px;
+  padding: 0px;
   margin-top: 20px;
 }
 
@@ -45,22 +45,31 @@
 
 
 .art-timer {
-  font-size: 16px;
   color: #918F8F;
   margin-right: 20px;
+
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  font-size: clamp(12px, calc(14 / 412 * 100vw), 14px);
 }
 
 
 .art-progress-number {
-  font-size: 32px;
   color: #000;
+
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  font-size: clamp(26px, calc(14 / 412 * 100vw), 30px);
 }
 
 .art-progress-text {
-  font-size: 16px;
   color: #908f8f;
   margin-top: auto;
   margin-bottom: 0px;
+
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  font-size: clamp(12px, calc(14 / 412 * 100vw), 14px);
 }
 
 .art-progress-percent {
@@ -121,7 +130,6 @@
   top: 24px;
   left: 24px;
 
-  
 }
 
 /* 다음 버튼 */
@@ -163,6 +171,6 @@
 /* 반응형 */
 @media (max-width: 412px) {
   .art-image-description {
-    width: 300px;
+    width: 274px;
   }
 }

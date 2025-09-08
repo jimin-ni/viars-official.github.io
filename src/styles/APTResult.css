@@ -122,11 +122,33 @@
 }
 
 .exhibition-card img {
-  width: 132;
-  height: 190px;
+  width: 100%;
+  max-width: 132px;
+  height: 100%;
+  max-height: 190px;
+
   object-fit: cover;
   border-radius: 10px;
 }
+
+@media (max-width: 412px) {
+  .apt-result__type  {
+    width: 330px;
+  }
+  .exhibition-card {
+    width: 330px;
+  }
+  .artist-card {
+    width: 330px;
+  }
+  .exhibition-card img {
+    width: 115px;
+  }
+
+}
+
+
+
 
 .exhibition-info {
   flex: 1;
@@ -203,12 +225,15 @@
 .primaryFilled {
   margin: 0 auto; 
   display: block;
+  /* width: 100%; */
 }
 
 /* 공유하기 버튼, 팝업 */
 .primaryOuntlined {
-  margin: 0 auto; 
+  /* margin: 0 auto;  */
   display: block;
+  /* width: 90%; */
+  margin: 24px auto 24px auto;
 }
 
 
