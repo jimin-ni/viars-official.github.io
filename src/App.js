@@ -18,6 +18,7 @@ import Docent from "./pages/Docent";
 import Market from "./pages/Market";
 import Article from "./pages/Article";
 import MyPage from "./pages/MyPage";
+import SignUp from "./pages/SignUp";
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
       <Route path="/myPage" element={<MyPage />} />
       {/* APTResult 테스트 결과 페이지 */}
       <Route path="/result/:type" element={<APTResult />} />
+      {/* signUp 테스트 결과 페이지 */}
+      <Route path="/signUp" element={<SignUp />} />
     </Routes>
   </BrowserRouter>
   );

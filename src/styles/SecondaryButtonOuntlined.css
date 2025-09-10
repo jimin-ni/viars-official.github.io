@@ -1,0 +1,79 @@
+/* src\styles\SecondaryButtonOuntlined.css */
+
+.secondaryOuntlined {
+    max-width: 364px;   /* 모바일 비율 */
+    height: 52px;        /*세로 고정 */
+    padding: 0;
+    border-radius: 10px;
+    background-color: white;
+    color: #000000;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    border: 2px solid #000000;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+
+@media (min-width: 412px) {
+  .secondaryOuntlined {
+    width: 300px;  /* PC 이하에서는 고정 */
+  }
+}
+  
+  /* 클릭 시 0.5초 hover 느낌 */
+.secondaryOuntlined.clicked {
+    background-color: #787878;
+    color: white;
+    border: none;
+}
+  
+  /* 클릭 후 활성화 상태 */
+.secondaryOuntlined.activated {
+    background-color: white;
+    color: #818181;
+    border: 2px solid #818181;
+}
+  
+  /* 비활성화 상태 */
+.secondaryOuntlined.disabled {
+    background-color: #787878;
+    color: #4B4B4B;
+    border: none;
+    cursor: not-allowed;
+}
+
+.popup {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0,0,0,0.8);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  z-index: 1000;
+  animation: fadeInOut 2s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translate(-50%, -20px); }
+  10% { opacity: 1; transform: translate(-50%, 0); }
+  90% { opacity: 1; transform: translate(-50%, 0); }
+  100% { opacity: 0; transform: translate(-50%, -20px); }
+}
+
+.btn-text {
+    margin: 0;
+    padding: 0 30% 0 0;
+}
+
+.btn-icon {
+   width: 7%;
+   /* max-width: 300px; */
+   /* height: auto; */
+   /* display: block; */
+   margin: 0;
+   padding: 0 5% 0 0;
+}
