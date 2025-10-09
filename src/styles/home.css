@@ -1,0 +1,214 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 70px; /* 하단 네비게이션 공간 확보 */
+  position: relative;
+}
+
+/* 상단 네비게이션 */
+.top-navbar {
+  position: fixed;
+  /* top: 30px;
+  right: 20px; */
+  display: flex;
+  gap: 22px;
+  z-index: 10;
+}
+.top-navbar img {
+  width: 24px;
+  height: 24px;
+}
+
+/* 배너 */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 424px;
+  overflow: hidden;
+}
+.banner-main {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+.banner-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 424px;
+  z-index: -1;
+}
+.banner-texts {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+.banner-texts .text-box {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+.banner-indicators {
+  display: flex;
+  gap: 6px;
+  margin-top: 10px;
+}
+.indicator {
+  width: 24px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #CDCACA;
+  cursor: pointer;
+}
+.indicator.active {
+  background-color: #474444;
+}
+
+/* 공통 섹션 */
+.section {
+  padding: 20px;
+}
+.section h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* 스크롤 가능한 가로 카드 */
+.scroll-row {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.scroll-row::-webkit-scrollbar {
+  display: none;
+}
+
+/* 월별 온라인 전시회 카드 */
+.monthly-card {
+  width: 242px;
+  height: 70px;
+  background-color: #F5F0F0;
+  border-radius: 10px;
+  display: flex;
+  padding: 5px;
+}
+.monthly-card img {
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+}
+.card-info {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.card-info .title {
+  font-weight: bold;
+  font-size: 14px;
+}
+.card-info .date {
+  font-size: 12px;
+  color: #777;
+}
+
+/* 전시회 추천 카드 */
+.recommend-card {
+  width: 364px;
+  height: 190px;
+  border-radius: 10px;
+  display: flex;
+  background: #f5f5f5;
+}
+.recommend-card .poster {
+  width: 132px;
+  height: 190px;
+  border-radius: 10px 0 0 10px;
+}
+.recommend-info {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+/* 이어듣기 카드 */
+.listen-card {
+  position: relative;
+  width: 170px;
+  height: 236px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.listen-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+}
+.listen-info {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  color: #fff;
+}
+.listen-info .small-text {
+  font-size: 12px;
+}
+.listen-info .big-text {
+  font-size: 20px;
+  font-weight: bold;
+}
+.progress-bar {
+  position: absolute;
+  bottom: 10px;
+  left: 5px;
+  width: 160px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #CDCACA;
+}
+.progress {
+  width: 110px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: #474444;
+}
+
+/* 이벤트 */
+.event-img {
+  width: 364px;
+  height: 336px;
+  border-radius: 10px;
+}
+
+/* 하단 네비게이션 */
+.bottom-navbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 412px;
+  height: 60px;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.bottom-navbar .nav-item {
+  font-size: 14px;
+  color: #333;
+}

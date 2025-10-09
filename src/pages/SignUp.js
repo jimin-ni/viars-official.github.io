@@ -25,7 +25,7 @@ function SignUp() {
     // SecondaryButtonOuntlined 시간을 고려해 액션 끝난 뒤 이동
     setTimeout(() => {
       navigate("/home");
-    }, 900); //  0.9초
+    }, 300); //  0.3초
   };
 
 
@@ -39,7 +39,7 @@ function SignUp() {
         </div>
 
         <div className="buttonBox">
-            <div className="Button1">
+            <div className="button1">
                 <SecondaryButtonOuntlined
                     icon={googleIcon}
                     text="Google로 회원가입"
