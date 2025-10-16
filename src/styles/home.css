@@ -1,56 +1,95 @@
 .home {
   display: flex;
   flex-direction: column;
-  padding-bottom: 70px; /* 하단 네비게이션 공간 확보 */
+  padding-bottom: 70px;
   position: relative;
+  width: 100%;
+  max-width: 412px;
+  margin: 0 auto;
 }
 
 /* 상단 네비게이션 */
 .top-navbar {
+  width: 100vw; /* ✅ 전체 화면 가로폭 */
+  max-width: 412px; /* ✅ 데스크탑에서는 412px 제한 */
+  height: 10vw;
+  min-height: 48px;
+  margin: 0;
+  padding: 0;
   position: fixed;
-  /* top: 30px;
-  right: 20px; */
+  top: 0;
+  /* left: 0; ✅ 화면 왼쪽부터 시작 */
   display: flex;
-  gap: 22px;
-  z-index: 10;
+  justify-content: flex-end; /* ✅ 내부 요소를 오른쪽 정렬 */
+  align-items: center;
+  gap: 5vw; /* ✅ 아이콘 간격 */
+  /* padding-right: 5vw; ✅ 오른쪽 여백 */
+
+  background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.658), rgba(255, 255, 255, 0.0));
+  z-index: 100;
 }
+
 .top-navbar img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
 
 /* 배너 */
 .banner {
   position: relative;
   width: 100%;
+  max-width: 412px;
   height: 424px;
   overflow: hidden;
+  /* margin-top: 10vw; 네비게이션 영역 확보 */
 }
 .banner-main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.8;
 }
-.banner-bg {
+
+/* 오버레이 벡터 이미지 */
+.banner-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 424px;
-  z-index: -1;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
 }
+.banner-overlay-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 중앙 정렬된 텍스트 및 인디케이터 */
 .banner-texts {
   position: absolute;
   bottom: 20px;
-  left: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  z-index: 10;
 }
-.banner-texts .text-box {
-  font-size: 18px;
+.banner-texts .subtitle1 {
   margin-bottom: 8px;
+  color: #000000;
 }
+
+.banner-texts .text1 {
+  margin-bottom: 8px;
+  color: #000000;
+}
+
+
+
 .banner-indicators {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 6px;
   margin-top: 10px;
 }
@@ -65,27 +104,27 @@
   background-color: #474444;
 }
 
-/* 공통 섹션 */
+/* 이하 기존 스타일 동일 */
 .section {
   padding: 20px;
 }
+
 .section h2 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-/* 스크롤 가능한 가로 카드 */
 .scroll-row {
   display: flex;
   gap: 12px;
   overflow-x: auto;
   scrollbar-width: none;
 }
+
 .scroll-row::-webkit-scrollbar {
   display: none;
 }
 
-/* 월별 온라인 전시회 카드 */
 .monthly-card {
   width: 242px;
   height: 70px;
@@ -94,27 +133,30 @@
   display: flex;
   padding: 5px;
 }
+
 .monthly-card img {
   width: 70px;
   height: 70px;
   border-radius: 8px;
 }
+
 .card-info {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+
 .card-info .title {
   font-weight: bold;
   font-size: 14px;
 }
+
 .card-info .date {
   font-size: 12px;
   color: #777;
 }
 
-/* 전시회 추천 카드 */
 .recommend-card {
   width: 364px;
   height: 190px;
@@ -122,18 +164,19 @@
   display: flex;
   background: #f5f5f5;
 }
+
 .recommend-card .poster {
   width: 132px;
   height: 190px;
   border-radius: 10px 0 0 10px;
 }
+
 .recommend-info {
   padding: 10px;
   display: flex;
   align-items: center;
 }
 
-/* 이어듣기 카드 */
 .listen-card {
   position: relative;
   width: 170px;
@@ -141,16 +184,19 @@
   border-radius: 10px;
   overflow: hidden;
 }
+
 .listen-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.3);
 }
+
 .play-btn {
   position: absolute;
   top: 50%;
@@ -159,19 +205,23 @@
   width: 40px;
   height: 40px;
 }
+
 .listen-info {
   position: absolute;
   bottom: 30px;
   left: 10px;
   color: #fff;
 }
+
 .listen-info .small-text {
   font-size: 12px;
 }
+
 .listen-info .big-text {
   font-size: 20px;
   font-weight: bold;
 }
+
 .progress-bar {
   position: absolute;
   bottom: 10px;
@@ -181,6 +231,7 @@
   border-radius: 2px;
   background-color: #CDCACA;
 }
+
 .progress {
   width: 110px;
   height: 4px;
@@ -188,18 +239,16 @@
   background-color: #474444;
 }
 
-/* 이벤트 */
 .event-img {
-  width: 364px;
-  height: 336px;
-  border-radius: 10px;
+  width: 90vw;
+  height: 90vw;
+  /* border-radius: 10px; */
 }
 
-/* 하단 네비게이션 */
 .bottom-navbar {
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 100vw;
   max-width: 412px;
   height: 60px;
   background: #fff;
@@ -208,7 +257,9 @@
   justify-content: space-around;
   align-items: center;
 }
+
 .bottom-navbar .nav-item {
-  font-size: 14px;
+  font-size: 10px;
   color: #333;
 }
+

@@ -102,7 +102,7 @@ const APTResultData = {
 
     exhibition: {
       title: "한 송이 꽃 속에 우주가 피어나다",
-      image: require("../assets/images/exhibition/한송이꽃속에우주가피어나다.png"),
+      image: require("../assets/images/exhibition/bloom.png"),
       location: "화이트큐브 서울 ",
       date: "2025.06.26 - 2025.08.09",
       tags: ["오디오 도슨트", "오프라인"],
@@ -219,7 +219,7 @@ const APTResultData = {
 
     exhibition: {
       title: "광채 光彩: 시작의 순간들",
-      image: require("../assets/images/exhibition/광채시작의순간들.jpg"),
+      image: require("../assets/images/exhibition/TheRadiance.jpg"),
       location: "서울시립 사진미술관",
       date: "2025.05.29 - 2025.10.12",
       tags: ["오디오 도슨트", "오프라인"],
