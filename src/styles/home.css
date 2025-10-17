@@ -4,53 +4,49 @@
   padding-bottom: 70px;
   position: relative;
   width: 100%;
-  max-width: 412px;
-  margin: 0 auto;
+  max-width: 412px; /* PC에서 최대폭 제한 */
+  margin: 0 auto; /* 중앙 정렬 */
+  overflow-x: hidden; /* PC에서 넘치는 가로 영역 숨김 */
 }
 
-/* 상단 네비게이션 */
+/* ===== 상단 네비게이션 ===== */
 .top-navbar {
-  width: 100vw; /* ✅ 전체 화면 가로폭 */
-  max-width: 412px; /* ✅ 데스크탑에서는 412px 제한 */
+  width: 100vw;
+  max-width: 412px;
   height: 10vw;
   min-height: 48px;
-  margin: 0;
-  padding: 0;
   position: fixed;
   top: 0;
-  /* left: 0; ✅ 화면 왼쪽부터 시작 */
   display: flex;
-  justify-content: flex-end; /* ✅ 내부 요소를 오른쪽 정렬 */
+  justify-content: flex-end;
   align-items: center;
-  gap: 5vw; /* ✅ 아이콘 간격 */
-  /* padding-right: 5vw; ✅ 오른쪽 여백 */
-
+  gap: 1vw;
   background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.658), rgba(255, 255, 255, 0.0));
   z-index: 100;
 }
 
 .top-navbar img {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
+  margin-right: 3vw;
 }
 
-/* 배너 */
+/* ===== 배너 ===== */
 .banner {
   position: relative;
-  width: 100%;
+  width: 100vw;
   max-width: 412px;
-  height: 424px;
+  height: 100vw;
   overflow: hidden;
-  /* margin-top: 10vw; 네비게이션 영역 확보 */
 }
 .banner-main {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+    display: block;
 
-/* 오버레이 벡터 이미지 */
+}
 .banner-overlay {
   position: absolute;
   inset: 0;
@@ -64,8 +60,6 @@
   height: 100%;
   object-fit: cover;
 }
-
-/* 중앙 정렬된 텍스트 및 인디케이터 */
 .banner-texts {
   position: absolute;
   bottom: 20px;
@@ -76,16 +70,12 @@
 }
 .banner-texts .subtitle1 {
   margin-bottom: 8px;
-  color: #000000;
+  color: #000;
 }
-
 .banner-texts .text1 {
   margin-bottom: 8px;
-  color: #000000;
+  color: #000;
 }
-
-
-
 .banner-indicators {
   display: flex;
   justify-content: center;
@@ -104,99 +94,104 @@
   background-color: #474444;
 }
 
-/* 이하 기존 스타일 동일 */
+/* ===== 섹션 기본 ===== */
 .section {
   padding: 20px;
 }
-
 .section h2 {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
+/* ===== 스크롤 가로행 (공통) ===== */
 .scroll-row {
   display: flex;
   gap: 12px;
   overflow-x: auto;
-  scrollbar-width: none;
+  scroll-snap-type: x mandatory; /* 스와이프 스냅 */
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 4px;
 }
-
 .scroll-row::-webkit-scrollbar {
   display: none;
 }
 
+/* ===== Monthly Card ===== */
 .monthly-card {
-  width: 242px;
-  height: 70px;
-  background-color: #F5F0F0;
+  flex: 0 0 auto; /* 가로 스와이프 시 줄어들지 않도록 */
+  width: 60vw;
+  height: 15.27vw;
+  max-width: 242px;
+  max-height: 63px;
+  background-color: #F0F0F5;
   border-radius: 10px;
   display: flex;
-  padding: 5px;
+  align-items: center;
+  overflow: hidden;
+  padding: 0;
 }
-
 .monthly-card img {
-  width: 70px;
-  height: 70px;
-  border-radius: 8px;
+  flex-shrink: 0;
+  width: 15.27vw;
+  height: 15.27vw;
+  border-radius: 10px;
+  object-fit: cover;
 }
-
 .card-info {
   margin-left: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
+.card-info .text1 {}
+.card-info .text3 {}
 
-.card-info .title {
-  font-weight: bold;
-  font-size: 14px;
-}
-
-.card-info .date {
-  font-size: 12px;
-  color: #777;
-}
-
+/* ===== Recommend Card ===== */
 .recommend-card {
-  width: 364px;
-  height: 190px;
+  flex: 0 0 auto;
+  width: 88.35vw; /* 364px 기준 */
+  height: 46.12vw; /* 190px 기준 */
+  max-width: 364px;
+  max-height: 190px;
   border-radius: 10px;
   display: flex;
   background: #f5f5f5;
 }
-
 .recommend-card .poster {
-  width: 132px;
-  height: 190px;
+  width: 32.04vw; /* 132px 기준 */
+  height: 46.12vw;
+  max-width: 132px;
+  max-height: 190px;
   border-radius: 10px 0 0 10px;
+  object-fit: cover;
 }
-
 .recommend-info {
   padding: 10px;
   display: flex;
   align-items: center;
 }
 
+/* ===== Listen Card ===== */
 .listen-card {
-  position: relative;
-  width: 170px;
-  height: 236px;
+  flex: 0 0 auto;
+  width: 41.26vw;  /* 170px 기준 */
+  height: 57.28vw; /* 236px 기준 */
+  max-width: 170px;
+  max-height: 236px;
   border-radius: 10px;
   overflow: hidden;
+  position: relative;
 }
-
 .listen-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.3);
 }
-
 .play-btn {
   position: absolute;
   top: 50%;
@@ -205,23 +200,14 @@
   width: 40px;
   height: 40px;
 }
-
 .listen-info {
   position: absolute;
   bottom: 30px;
   left: 10px;
   color: #fff;
 }
-
-.listen-info .small-text {
-  font-size: 12px;
-}
-
-.listen-info .big-text {
-  font-size: 20px;
-  font-weight: bold;
-}
-
+.listen-info .small-text { font-size: 12px; }
+.listen-info .big-text { font-size: 20px; font-weight: bold; }
 .progress-bar {
   position: absolute;
   bottom: 10px;
@@ -231,7 +217,6 @@
   border-radius: 2px;
   background-color: #CDCACA;
 }
-
 .progress {
   width: 110px;
   height: 4px;
@@ -239,12 +224,13 @@
   background-color: #474444;
 }
 
+/* ===== Event Image ===== */
 .event-img {
   width: 90vw;
   height: 90vw;
-  /* border-radius: 10px; */
 }
 
+/* ===== Bottom Navbar ===== */
 .bottom-navbar {
   position: fixed;
   bottom: 0;
@@ -257,9 +243,18 @@
   justify-content: space-around;
   align-items: center;
 }
-
 .bottom-navbar .nav-item {
   font-size: 10px;
   color: #333;
 }
 
+/* ===== 반응형 조정 ===== */
+@media screen and (max-width: 767px) {
+  .home .banner  {
+    max-width: 100%;
+  }
+  .scroll-row {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

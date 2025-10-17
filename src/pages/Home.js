@@ -1,12 +1,12 @@
 // src/pages/Home.js
 import React, { useState, useEffect, useRef } from "react";
-import '../styles/Global.css'; 
-import '../styles/Landing.css'; 
+import "../styles/Global.css";
+import "../styles/Landing.css";
 import "../styles/home.css";
 
 import settingIcon from "../assets/icons/setting.png";
 import alarmIcon from "../assets/icons/alarm.png";
-import homeBannerVector from "../assets/images/homeBannerVector.png"; // 추가
+import homeBannerVector from "../assets/images/homeBannerVector.png";
 
 import post1 from "../assets/images/exhibition/TheReturn.png";
 import post2 from "../assets/images/exhibition/TheMutableLine.jpg";
@@ -17,7 +17,7 @@ import post5 from "../assets/images/exhibition/2025아시아프.png";
 import poster1 from "../assets/images/exhibition/Mia's Zoo.jpg";
 import poster2 from "../assets/images/exhibition/TreeInTree_square.jpg";
 
-import recommend1 from "../assets/images/exhibition/2025아시아프.png"
+import recommend1 from "../assets/images/exhibition/2025아시아프.png";
 import recommend2 from "../assets/images/exhibition/MagicForLove.jpg";
 import recommend3 from "../assets/images/exhibition/TheRadiance.jpg";
 
@@ -33,7 +33,22 @@ function Home() {
   const slides = [post1, post2, post3, post4, post5];
   const bannerRef = useRef(null);
 
-  // 3.5초마다 자동 슬라이드
+  // 각 배너별 텍스트
+  const bannerTexts = [
+    { subtitle1: "James Turrell: The Return", text1: "2025.06.14 - 09.27" },
+    { subtitle1: "The Mutable Line", text1: "2025.07.02 - 09.30" },
+    { subtitle1: "The Radiance", text1: "2025.04.10 - 07.21" },
+    { subtitle1: "The Whole World’s A Canvas", text1: "2025.03.01 - 06.01" },
+    { subtitle1: "2025 ASYAAF", text1: "2025.08.10 - 09.15" },
+  ];
+
+  // monthly-card 데이터
+  const monthlyCards = [
+    { img: poster1, text1: "Mia's Zoo", text3: "2021.06.10 -" },
+    { img: poster2, text1: "Tree In Tree", text3: "2022.09.05 -" },
+  ];
+
+  // 자동 슬라이드
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
@@ -53,9 +68,9 @@ function Home() {
     const handleTouchEnd = (e) => {
       endX = e.changedTouches[0].clientX;
       if (startX - endX > 50) {
-        setActiveSlide((prev) => (prev + 1) % slides.length); // 다음
+        setActiveSlide((prev) => (prev + 1) % slides.length);
       } else if (endX - startX > 50) {
-        setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length); // 이전
+        setActiveSlide((prev) => (prev - 1 + slides.length) % slides.length);
       }
     };
 
@@ -70,30 +85,27 @@ function Home() {
 
   return (
     <div className="home">
-
-      {/* 상단 고정 네비게이션 */}
+      {/* 상단 네비게이션 */}
       <div className="top-navbar">
         <img
           src={settingIcon}
-          alt="setting"
           className="nav-icon"
           onClick={() => (window.location.href = "/mypage")}
         />
         <img src={alarmIcon} alt="alarm" className="nav-icon" />
       </div>
 
-      {/* 상단 배너 */}
+      {/* 배너 */}
       <div className="banner" ref={bannerRef}>
         <img src={slides[activeSlide]} alt="main banner" className="banner-main" />
 
-        {/* 반투명 오버레이 (가장 위에 위치) */}
         <div className="banner-overlay">
           <img src={homeBannerVector} alt="overlay" className="banner-overlay-img" />
         </div>
 
         <div className="banner-texts">
-          <div className="subtitle1">첫 번째 텍스트</div>
-          <div className="text1">두 번째 텍스트</div>
+          <div className="subtitle1">{bannerTexts[activeSlide].subtitle1}</div>
+          <div className="text1">{bannerTexts[activeSlide].text1}</div>
 
           <div className="banner-indicators">
             {slides.map((_, i) => (
@@ -107,28 +119,29 @@ function Home() {
         </div>
       </div>
 
-      {/* 이하 기존 섹션 동일 */}
+      {/* 월간 카드 */}
       <section className="section">
-        <h2>11월 온라인 전시회</h2>
+        <div className="subtitle1">11월 온라인 전시회</div>
         <div className="scroll-row">
-          {[poster1, poster2].map((poster, i) => (
+          {monthlyCards.map((card, i) => (
             <div className="monthly-card" key={i}>
-              <img src={poster} alt={`poster ${i+1}`} />
+              <img src={card.img} alt={`poster ${i + 1}`} />
               <div className="card-info">
-                <p className="title">전시회 {i + 1}</p>
-                <p className="date">2025.05.{i + 1} ~ 2025.06.{i + 1}</p>
+                <p className="text1">{card.text1}</p>
+                <p className="text3">{card.text3}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
+      {/* 추천 전시 */}
       <section className="section">
         <h2>춤추는 라마님을 위한 전시회</h2>
         <div className="scroll-row">
           {[recommend1, recommend2, recommend3].map((rec, i) => (
             <div className="recommend-card" key={i}>
-              <img src={rec} alt={`recommend ${i+1}`} className="poster" />
+              <img src={rec} alt={`recommend ${i + 1}`} className="poster" />
               <div className="recommend-info">
                 <p>추천 전시회 {i + 1}</p>
               </div>
@@ -137,12 +150,13 @@ function Home() {
         </div>
       </section>
 
+      {/* 이어듣기 */}
       <section className="section">
         <h2>이어듣기</h2>
         <div className="scroll-row">
           {[listen1, listen2, listen3].map((listen, i) => (
             <div className="listen-card" key={i}>
-              <img src={listen} alt={`listen ${i+1}`} className="listen-img" />
+              <img src={listen} alt={`listen ${i + 1}`} className="listen-img" />
               <div className="overlay" />
               <img src={playBtn} alt="play" className="play-btn" />
               <div className="listen-info">
