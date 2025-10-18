@@ -20,7 +20,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1vw;
+  gap: 0px;
   background: linear-gradient(to bottom, rgb(255, 255, 255), rgba(255, 255, 255, 0.658), rgba(255, 255, 255, 0.0));
   z-index: 100;
 }
@@ -37,6 +37,8 @@
   position: relative;
   width: 100vw;      /* 뷰포트 전체 기준 */
   height: 100vw;     /* 정사각형 비율 유지 */
+    max-width: 412px;
+  max-height: 424px;
   margin: 0;
   top: 0;
 }
@@ -44,6 +46,8 @@
 .banner-main {
   width: 100vw;
   height: 100vw;
+    max-width: 412px;
+  max-height: 424px;
   object-fit: cover;
   display: block;
 }
@@ -61,22 +65,27 @@
 .banner-overlay-img {
   width: 100vw;
   height: 100vw;
+  max-width: 412px;
+  max-height: 424px;
   object-fit: cover;
 }
 
 /* 텍스트와 인디케이터 */
 .banner-texts {
   position: absolute;
-  padding-top: 80vw;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  bottom: 0;         /* 👈 하단에 딱 붙게 */
+  left: 0;
+  width: 100%;
   z-index: 3;
   text-align: center;
   color: #000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end; /* 하단 정렬 */
+  padding-bottom: 0;         /* 여백 제거 */
 }
+
 
 .banner-texts .subtitle1 {
   padding: 0px 0px;
@@ -94,7 +103,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1vw;
+  gap: 5px;
   margin-top: 10px;
 }
 
@@ -124,7 +133,7 @@
 /* ===== 스크롤 가로행 (공통) ===== */
 .scroll-row {
   display: flex;
-  gap: 3vw;
+  gap: 10px;
   overflow-x: auto;
   scroll-snap-type: x mandatory; /* 스와이프 스냅 */
   -webkit-overflow-scrolling: touch;
@@ -152,6 +161,8 @@
   flex-shrink: 0;
   width: 15.27vw;
   height: 15.27vw;
+  max-width: 70px;
+  max-height: 70px;
   border-radius: 10px;
   object-fit: cover;
 }
@@ -247,6 +258,8 @@
   transform: translate(-50%, -50%);
   width: 15vw;
   height: 15vw;
+  max-width: 55px;
+  max-height: 55px;
 }
 
 .listen-info {
@@ -284,6 +297,8 @@
 .event-img {
   width: 90vw;
   height: 90vw;
+  max-width: 364px;
+  max-height: 364px;
 }
 
 /* ===== Bottom Navbar ===== */
