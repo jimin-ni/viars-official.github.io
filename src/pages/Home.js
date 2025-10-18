@@ -1,7 +1,6 @@
 // src/pages/Home.js
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/Global.css";
-import "../styles/Landing.css";
 import "../styles/home.css";
 
 import settingIcon from "../assets/icons/setting.png";
@@ -33,22 +32,63 @@ function Home() {
   const slides = [post1, post2, post3, post4, post5];
   const bannerRef = useRef(null);
 
-  // 각 배너별 텍스트
   const bannerTexts = [
     { subtitle1: "James Turrell: The Return", text1: "2025.06.14 - 09.27" },
-    { subtitle1: "The Mutable Line", text1: "2025.07.02 - 09.30" },
-    { subtitle1: "The Radiance", text1: "2025.04.10 - 07.21" },
-    { subtitle1: "The Whole World’s A Canvas", text1: "2025.03.01 - 06.01" },
-    { subtitle1: "2025 ASYAAF", text1: "2025.08.10 - 09.15" },
+    { subtitle1: "The Mutable Line", text1: "2025.06.25 - 07.26" },
+    { subtitle1: "The Radiance", text1: "2025.05.29 - 10.12" },
+    { subtitle1: "The Whole World’s A Canvas", text1: "2025.03.21 - 2026.2.28" },
+    { subtitle1: "2025 ASYAAF", text1: "2025.08.12 - 09.07" },
   ];
 
-  // monthly-card 데이터
   const monthlyCards = [
     { img: poster1, text1: "Mia's Zoo", text3: "2021.06.10 -" },
     { img: poster2, text1: "Tree In Tree", text3: "2022.09.05 -" },
   ];
 
-  // 자동 슬라이드
+  // ✅ 추천 전시 데이터
+  const recommendCards = [
+    {
+      img: recommend1,
+      tags: ["오디오 도슨트", "오프라인"],
+      title: "2025 아시아프",
+      place: "문화역서울284",
+      date: "2025.08.12 - 09.07",
+    },
+    {
+      img: recommend2,
+      tags: ["오디오 도슨트", "오프라인"],
+      title: "Magic For Love",
+      place: "서울시립미술관",
+      date: "2025.09.10 - 11.20",
+    },
+    {
+      img: recommend3,
+      tags: ["오디오 도슨트", "오프라인"],
+      title: "The Radiance",
+      place: "리움미술관",
+      date: "2025.07.01 - 10.12",
+    },
+  ];
+
+  // ✅ 이어듣기 데이터
+  const listenCards = [
+    {
+      img: listen1,
+      text2: "Magic for Love",
+      subtitle3: "4. MONSTERS INC",
+    },
+    {
+      img: listen2,
+      text2: "James Turrell: The Return",
+      subtitle3: "2. THE WEDGE",
+    },
+    {
+      img: listen3,
+      text2: "Magic for Love",
+      subtitle3: "THE ELEMENT...",
+    },
+  ];
+
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveSlide((prev) => (prev + 1) % slides.length);
@@ -56,7 +96,6 @@ function Home() {
     return () => clearInterval(interval);
   }, []);
 
-  // 스와이프 기능
   useEffect(() => {
     const banner = bannerRef.current;
     let startX = 0;
@@ -98,15 +137,12 @@ function Home() {
       {/* 배너 */}
       <div className="banner" ref={bannerRef}>
         <img src={slides[activeSlide]} alt="main banner" className="banner-main" />
-
         <div className="banner-overlay">
           <img src={homeBannerVector} alt="overlay" className="banner-overlay-img" />
         </div>
-
         <div className="banner-texts">
           <div className="subtitle1">{bannerTexts[activeSlide].subtitle1}</div>
           <div className="text1">{bannerTexts[activeSlide].text1}</div>
-
           <div className="banner-indicators">
             {slides.map((_, i) => (
               <div
@@ -137,31 +173,40 @@ function Home() {
 
       {/* 추천 전시 */}
       <section className="section">
-        <h2>춤추는 라마님을 위한 전시회</h2>
+        <div className="subtitle1">춤추는 라마님을 위한 전시회</div>
         <div className="scroll-row">
-          {[recommend1, recommend2, recommend3].map((rec, i) => (
+          {recommendCards.map((rec, i) => (
             <div className="recommend-card" key={i}>
-              <img src={rec} alt={`recommend ${i + 1}`} className="poster" />
+              <img src={rec.img} alt={`recommend ${i + 1}`} className="poster" />
               <div className="recommend-info">
-                <p>추천 전시회 {i + 1}</p>
+                <div className="tag-row">
+                  {rec.tags.map((tag, idx) => (
+                    <span className="tag" key={idx}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <p className="subtitle4">{rec.title}</p>
+                <p className="text4">{rec.place}</p>
+                <p className="text1">{rec.date}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
 
-      {/* 이어듣기 */}
+      {/* ✅ 이어듣기 */}
       <section className="section">
-        <h2>이어듣기</h2>
+        <div className="subtitle1">이어듣기</div>
         <div className="scroll-row">
-          {[listen1, listen2, listen3].map((listen, i) => (
+          {listenCards.map((card, i) => (
             <div className="listen-card" key={i}>
-              <img src={listen} alt={`listen ${i + 1}`} className="listen-img" />
+              <img src={card.img} alt={`listen ${i + 1}`} className="listen-img" />
               <div className="overlay" />
               <img src={playBtn} alt="play" className="play-btn" />
               <div className="listen-info">
-                <p className="small-text">작품 {i + 1}</p>
-                <p className="big-text">제목 {i + 1}</p>
+                <p className="text2">{card.text2}</p>
+                <p className="subtitle3">{card.subtitle3}</p>
               </div>
               <div className="progress-bar">
                 <div className="progress" />
@@ -172,7 +217,7 @@ function Home() {
       </section>
 
       <section className="section">
-        <h2>진행 중인 이벤트</h2>
+        <div className="subtitle1">진행 중인 이벤트</div>
         <img src={eventImg} alt="event" className="event-img" />
       </section>
 
