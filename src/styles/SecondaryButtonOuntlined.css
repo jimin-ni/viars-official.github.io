@@ -1,9 +1,12 @@
 /* src\styles\SecondaryButtonOuntlined.css */
 
 .secondaryOuntlined {
-    max-width: 364px;   /* 모바일 비율 */
-    height: 52px;        /*세로 고정 */
+    width: 85vw;
+    max-width: 364px;
+    height: 13vw;
+    max-height: 55px;
     padding: 0;
+    margin: 0;
     border-radius: 10px;
     background-color: white;
     color: #000000;
@@ -12,12 +15,12 @@
     font-size: 16px;
     border: 1.5px solid #000000;
     cursor: pointer;
-    transition: all 0.5s ease;
+    transition: all 0.6s ease;
   }
 
-@media (min-width: 412px) {
+@media (min-width: 360) {
   .secondaryOuntlined {
-    width: 300px;  /* PC 이하에서는 고정 */
+    width: 364px;  /* PC 이하에서는 고정 */
   }
 }
   
@@ -48,11 +51,11 @@
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.6);
   color: #fff;
   padding: 12px 20px;
   border-radius: 8px;
-  font-size: 14px;
+  font-size: 10px;
   z-index: 1000;
   animation: fadeInOut 2s ease forwards;
 }
@@ -74,6 +77,6 @@
    /* max-width: 300px; */
    /* height: auto; */
    /* display: block; */
-   margin: 0;
-   padding: 0 5% 0 0;
-}
+   margin-right: 16px;
+   padding: 0;
+  }

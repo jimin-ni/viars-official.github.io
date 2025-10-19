@@ -14,10 +14,6 @@ import appleIcon from "../assets/icons/apple.png";
 import naverIcon from "../assets/icons/naver.png";
 import emailIcon from "../assets/icons/email.png";
 
-
-
-
-
 function SignUp() {
   const navigate = useNavigate();
 
@@ -25,10 +21,8 @@ function SignUp() {
     // SecondaryButtonOuntlined 시간을 고려해 액션 끝난 뒤 이동
     setTimeout(() => {
       navigate("/home");
-    }, 300); //  0.3초
+    }, 250); //  0.3초
   };
-
-
 
   return (
     <div className="signUpPage">   
@@ -77,12 +71,9 @@ function SignUp() {
         </div>
 
         <div className="signUpMore">
-            <p className=" text1">계정이 있어요  |  계정 없이 둘러볼래요</p>
+            <p className="text1">계정이 있어요  |  계정 없이 둘러볼래요</p>
         </div>
-
-
     </div>
-
   );
 }
 

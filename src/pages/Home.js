@@ -27,6 +27,9 @@ import listen3 from "../assets/images/exhibition/listen_magic for love.png";
 import playBtn from "../assets/icons/play.png";
 import eventImg from "../assets/images/event.png";
 
+import NavbarBottom from "../components/NavbarBottom"; // ✅ 추가
+
+
 function Home() {
   const [activeSlide, setActiveSlide] = useState(0);
   const slides = [post1, post2, post3, post4, post5];
@@ -221,13 +224,7 @@ function Home() {
         <img src={eventImg} alt="event" className="event-img" />
       </section>
 
-      <nav className="bottom-navbar">
-        <div className="nav-item">Home</div>
-        <div className="nav-item">Docent</div>
-        <div className="nav-item">Market</div>
-        <div className="nav-item">Article</div>
-        <div className="nav-item">Mypage</div>
-      </nav>
+      <NavbarBottom />
     </div>
   );
 }

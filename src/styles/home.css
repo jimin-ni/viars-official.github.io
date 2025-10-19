@@ -302,7 +302,7 @@
 }
 
 /* ===== Bottom Navbar ===== */
-.bottom-navbar {
+/* .bottom-navbar {
   position: fixed;
   bottom: 0;
   width: 100vw;
@@ -317,7 +317,7 @@
 .bottom-navbar .nav-item {
   font-size: 10px;
   color: #333;
-}
+} */
 
 /* ===== 반응형 조정 ===== */
 /* @media screen and (min-width: 768px) {
