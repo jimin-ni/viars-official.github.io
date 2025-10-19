@@ -1,7 +1,7 @@
 // src/pages/Home.js
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/Global.css";
-import "../styles/Home.css";
+import "../styles/home.css";
 
 import settingIcon from "../assets/icons/setting.png";
 import alarmIcon from "../assets/icons/alarm.png";
