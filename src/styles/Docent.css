@@ -1,0 +1,120 @@
+/* src\styles\Docent.css */
+
+.Docent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: sans-serif;
+}
+
+/* --- Navbar --- */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  /* position: fixed; */
+  /* top: 0; */
+  justify-content: flex-end;
+  width: 100vw;
+  max-width: 412px;
+  height: 10vw;
+  min-height: 48px;
+  background: #ffffff;
+  z-index: 100;
+}
+
+.navbar img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+  margin-right: 3vw;
+  margin-top: 5vw;
+
+}
+
+
+/* --- Auction NavBar --- */
+.auction-navbar {
+  display: flex;
+  /* background: rgb(255, 255, 255);
+  position: fixed; */
+
+  justify-content: space-around;
+  border-bottom: 1px solid #ffffff;
+  width: 100vw;
+  max-width: 412px;
+  height: 0vw;
+  min-height: 90px;
+
+}
+
+.auction-tab {
+  color: #CDCACA;
+  /* padding: 15px; */
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  padding-top: 50;
+}
+
+.auction-tab.active {
+  color: rgb(0, 0, 0);
+  position: relative;
+
+}
+
+.auction-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: black;
+  margin: 0;
+  padding: 0; 
+} 
+
+/* --- Tag List --- */
+.tag-list {
+  display: flex;
+  gap: 2px;
+  justify-content: center;
+  margin: 20px auto 20px 18px;
+  gap: 10px;
+}
+
+.tag {
+  width: 12vw;
+  max-width: 73px;
+  height: 5vw;
+  max-height: 35px;
+  border: 2px solid #1D2087;
+  color: #1D2087;
+  border-radius: 10px;
+  padding: 4px 10px;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 500;
+}
+
+.tag.active {
+  border: 2px solid #1D2087;
+  color: #ffffff;
+  background: #1D2087;
+}
+
+/* --- Event Image --- */
+.event-img-wide {
+  width: 90vw;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+/* --- Artwork Grid --- */
+.artwork-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}

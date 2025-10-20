@@ -71,7 +71,8 @@ function SignUp() {
         </div>
 
         <div className="signUpMore">
-            <p className="text1">계정이 있어요  |  계정 없이 둘러볼래요</p>
+            <div className="text1">계정이 있어요  |  계정 없이 둘러볼래요</div>
+             
         </div>
     </div>
   );

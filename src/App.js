@@ -1,6 +1,7 @@
 // src/App.js
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 
 // styles 폴더 안의 폰트, css 불러오기
 import './styles/TextStyles.css'; //  폰트 상세 정보
@@ -23,6 +24,7 @@ import SignUp from "./pages/SignUp";
 function App() {
   return (
     <BrowserRouter>
+      <ScrollToTop /> {/* ✅ 페이지 이동 시 스크롤을 맨 위로 */}
     <Routes>
       {/* 최초 접속 시 랜딩 페이지 */}
       <Route path="/" element={<Landing />} />

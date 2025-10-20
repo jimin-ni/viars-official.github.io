@@ -1,0 +1,71 @@
+/*  src\styles\ArtworkCard.css  */
+
+.artwork-card {
+  width: 40vw;
+  max-width: 178px;
+  max-height: 408px;
+}
+
+.artwork-placeholder {
+  background: #f0f0f5;
+  border-radius: 10px;
+  width: 178px;
+  height: 270px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artwork-placeholder img {
+  max-width: 149px;
+  max-height: 227px;
+}
+
+.artwork-info {
+  padding: 5px;
+}
+
+.artwork-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artist-img {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+}
+
+.artwork-tag {
+  border: 1px solid blue;
+  color: blue;
+  border-radius: 4px;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+.artwork-title {
+  color: #474444;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.artwork-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 4px;
+}
+
+.count-circle {
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: #f0f0f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #474444;
+  font-size: 12px;
+}
