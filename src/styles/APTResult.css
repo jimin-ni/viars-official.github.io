@@ -11,8 +11,9 @@
   margin: 90px 0;
 }
 
-.textDescription {
-  width: 350px;
+.textDescription .text1{
+  width: 90vw;
+  max-width: 350px;
   margin: 20px auto;
 }
 
@@ -52,10 +53,12 @@
   justify-content: space-between;
   margin-top: 12px;
   margin-bottom: 24px;
+  gap: 5px;
 }
 
 .apt-result__icons img {
-  width: 84px;
+  width: 20vw;
+  max-width: 84px;
   height: 130px;
   object-fit: contain;
 }
@@ -69,9 +72,12 @@
 }
 
 .apt-result__traits img {
-  width: 364px;
-  height: 134px;
+  width: 89vw;
+  max-width: 364px;
+  /* height: 134px; */
   object-fit: cover;
+  gap: 8px;
+
 }
 
 .apt-result__exhibition {
@@ -100,7 +106,7 @@
 }
 
 .text1 {
-  padding: 0px;
+  /* padding: 0px; */
   margin-top: 10px;
   margin-bottom: 0px;
 }
@@ -108,7 +114,6 @@
 .exhibition-card {
   display: flex;
   width: 100%;
-  max-width: 364px;
   height: 190px;
   background: #fff;
   border-radius: 10px;
@@ -131,22 +136,28 @@
 
 @media (max-width: 412px) {
   .apt-result__type  {
-    width: 330px;
+    width: 320px;
   }
   .exhibition-card {
-    width: 330px;
+    width: 320px;
   }
   .artist-card {
-    width: 330px;
+    width: 320px;
   }
+
+  .primaryFilled {
+    width: 320px;
+  }
+
+  .primaryOuntlined {
+    width: 320px;
+  }
+
   .exhibition-card img {
     width: 115px;
   }
 
 }
-
-
-
 
 .exhibition-info {
   flex: 1;
@@ -156,19 +167,30 @@
 
 .tags {
   display: flex;
-  gap: 18px;
+  gap: 8px;
   margin-top: 4px;
-  font-size: 1px;
+
 }
 
 .tag {
   border: 2px solid #1D2087;
-  padding: 0px 0px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: auto 3px auto 3px;
   border-radius: 10px;
   /* font-size: 10px; */
   /* font-weight: 500; */
   color: #1D2087;
+  width: auto; 
+  max-width: 126px;
+  max-height: 32px;
 }
+
+.PrimaryButton {
+
+}
+
+
 
 .apt-result__artists {
   background-color: #f0f0f0;
@@ -190,20 +212,6 @@
   margin-left: auto;
   overflow: hidden;
 }
-
-@media (max-width: 412px) {
-  .apt-result__type  {
-    width: 330px;
-  }
-  .exhibition-card {
-    width: 330px;
-  }
-  .artist-card {
-    width: 330px;
-  }
-}
-
-
 
 .artist_textbox {
   margin:  12px;

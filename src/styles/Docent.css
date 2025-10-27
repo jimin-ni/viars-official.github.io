@@ -1,18 +1,16 @@
-/* src\styles\Docent.css */
+/* src/styles/Docent.css */
 
 .Docent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: sans-serif;
+  background: #ffffff;
+
 }
 
 /* --- Navbar --- */
 .navbar {
   display: flex;
-  justify-content: space-around;
-  /* position: fixed; */
-  /* top: 0; */
   justify-content: flex-end;
   width: 100vw;
   max-width: 412px;
@@ -28,59 +26,54 @@
   cursor: pointer;
   margin-right: 3vw;
   margin-top: 5vw;
-
 }
-
 
 /* --- Auction NavBar --- */
 .auction-navbar {
   display: flex;
-  /* background: rgb(255, 255, 255);
-  position: fixed; */
-
   justify-content: space-around;
-  border-bottom: 1px solid #ffffff;
   width: 100vw;
   max-width: 412px;
-  height: 0vw;
-  min-height: 90px;
-
+  height: 60px;
+  align-items: center;
 }
 
 .auction-tab {
-  color: #CDCACA;
-  /* padding: 15px; */
-  font-size: 22px;
+  color: #cdcdcd;
+  font-size: 18px;
   font-weight: 600;
-  margin: 0;
-  padding-top: 50;
+  cursor: pointer;
+  position: relative;
+  transition: color 0.2s ease;
 }
 
 .auction-tab.active {
-  color: rgb(0, 0, 0);
-  position: relative;
-
+  color: #000;
 }
 
 .auction-tab.active::after {
   content: "";
   position: absolute;
-  bottom: 0px;
+  bottom: -8px;
   left: 0;
   right: 0;
   height: 3px;
   background-color: black;
-  margin: 0;
-  padding: 0; 
-} 
+  margin: 0 auto;
+  width: 100%;
+}
 
 /* --- Tag List --- */
-.tag-list {
+.Docent .tag-list {
   display: flex;
-  gap: 2px;
-  justify-content: center;
-  margin: 20px auto 20px 18px;
+  justify-content: flex-start; /* 왼쪽 정렬 */
   gap: 10px;
+  width: 100%; /* 부모의 폭을 전부 차지해야 왼쪽 정렬이 의미 있음 */
+  max-width: 412px; /* 모바일 기준 맞춤 */
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px; /* 화면 왼쪽에서 10px 떨어지게 */
+  box-sizing: border-box; /* 패딩 포함 계산 */
 }
 
 .tag {
@@ -88,25 +81,26 @@
   max-width: 73px;
   height: 5vw;
   max-height: 35px;
-  border: 2px solid #1D2087;
-  color: #1D2087;
+  border: 2px solid #1d2087;
+  color: #1d2087;
   border-radius: 10px;
   padding: 4px 10px;
   cursor: pointer;
-  font-size: 13px;
   font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: clamp(10px, calc(14 / 360 * 100vw), 14px);
+  text-align: center;
 }
 
 .tag.active {
-  border: 2px solid #1D2087;
-  color: #ffffff;
-  background: #1D2087;
+  color: #fff;
+  background: #1d2087;
 }
 
 /* --- Event Image --- */
 .event-img-wide {
   width: 90vw;
+  max-width: 364px;
   margin: 10px 0;
   border-radius: 10px;
 }
@@ -116,5 +110,15 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 10px;
+  gap: 16px;
+  margin-bottom: 100px;
+  background-color: #fff;
 }
+
+/* --- No Artwork Message --- */
+.no-artwork {
+  color: #888;
+  font-size: 14px;
+  margin-top: 20px;
+}
+

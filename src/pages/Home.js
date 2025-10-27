@@ -27,7 +27,7 @@ import listen3 from "../assets/images/exhibition/listen_magic for love.png";
 import playBtn from "../assets/icons/play.png";
 import eventImg from "../assets/images/event.png";
 
-import NavbarBottom from "../components/NavbarBottom"; // ✅ 추가
+import NavbarBottom from "../components/NavbarBottom"; 
 
 
 function Home() {

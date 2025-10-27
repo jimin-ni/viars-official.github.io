@@ -199,7 +199,7 @@
 /* ✅ 오른쪽 정보 영역 */
 .recommend-info {
   flex: 1;
-  padding: 9px 9px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -209,16 +209,21 @@
 .tag-row {
   display: flex;
   gap: 2vw;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
+  margin-right: 0;
 }
 
-.tag {
+.recommend-info .tag {
+  width: auto;
+  max-width: 126px;
+  max-height: 32px;
   border: 1px solid #1D2087;
   color: #1D2087;
   font-size: 14px;
   font-weight: 500;
   border-radius: 8px;
-  padding: 0px 7px;
+  padding: 0 6px;
+  margin: 0;
   height: 32px;
   display: flex;
   align-items: center;

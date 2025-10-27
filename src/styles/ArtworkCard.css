@@ -1,71 +1,108 @@
-/*  src\styles\ArtworkCard.css  */
-
 .artwork-card {
-  width: 40vw;
-  max-width: 178px;
-  max-height: 408px;
+  display: flex;
+  flex-direction: column;
+  width: 42vw;
+  max-width: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  color: #fff;
+  padding-bottom: 8px;
 }
 
-.artwork-placeholder {
-  background: #f0f0f5;
-  border-radius: 10px;
-  width: 178px;
-  height: 270px;
+.artwork-main {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+  background-color: #F0F0F5;
+}
+
+.artwork-main .img {
+  width: 100%;
+  margin: 10px;
+}
+
+/* --- Artist Info (이미지+이름+태그 수평 정렬) --- */
+.artist-info {
   display: flex;
-  justify-content: center;
   align-items: center;
-}
-
-.artwork-placeholder img {
-  max-width: 149px;
-  max-height: 227px;
-}
-
-.artwork-info {
-  padding: 5px;
-}
-
-.artwork-top {
-  display: flex;
   justify-content: space-between;
+  margin-top: 6px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.artist-left {
+  display: flex;
   align-items: center;
+  gap: 6px;
 }
 
 .artist-img {
-  width: 26px;
-  height: 26px;
+  width: 22px;
+  height: 22px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
-.artwork-tag {
-  border: 1px solid blue;
-  color: blue;
-  border-radius: 4px;
-  font-size: 12px;
-  padding: 2px 6px;
+.artist-name {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: 400;
+  font-size: clamp(10px, calc(12 / 360 * 100vw), 12px);
+  color: #474444;
+}
+
+/* 태그 (오른쪽 끝 배지) */
+.art-tag {
+  display: inline-block;
+  padding: 2px 8px;
+  border: 2px solid #1d2087;
+  color: #1d2087;
+  border-radius: 8px;
+  font-size: clamp(9px, calc(11 / 360 * 100vw), 11px);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* --- Artwork Details --- */
+.artwork-details {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  row-gap: 4px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: 4px;
 }
 
 .artwork-title {
+  grid-column: 1 / -1;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: clamp(12px, calc(14 / 360 * 100vw), 14px);
+  font-weight: 500;
   color: #474444;
-  font-size: 14px;
-  margin-top: 4px;
 }
 
-.artwork-bottom {
-  display: flex;
-  justify-content: space-between;
+.artwork-price {
+  grid-column: 1 / 2;
+  align-self: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: clamp(10px, calc(12 / 360 * 100vw), 12px);
+  color: #000000;
+}
+
+/* 회색 동그라미 안에 회차 */
+.artwork-count {
+  grid-column: 2 / 3;
+  justify-self: end;
+  align-self: center;
+  display: inline-flex;
   align-items: center;
-  margin-top: 4px;
-}
-
-.count-circle {
-  width: 27px;
-  height: 27px;
-  border-radius: 50%;
-  background: #f0f0f5;
-  display: flex;
   justify-content: center;
-  align-items: center;
+  width: clamp(18px, calc(22 / 360 * 100vw), 22px);
+  height: clamp(18px, calc(22 / 360 * 100vw), 22px);
+  border-radius: 50%;
+  background: #E6E6EA;
   color: #474444;
-  font-size: 12px;
+  font-size: clamp(9px, calc(11 / 360 * 100vw), 11px);
+  font-weight: 500;
+  line-height: 1;
 }

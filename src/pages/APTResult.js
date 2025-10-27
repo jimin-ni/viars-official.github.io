@@ -47,7 +47,7 @@ function APTResult() {
         <p className="subtitle1">테스트 결과</p>
         <div className="textDescription">
           <p className="text1" >
-            Art Personality Test는 사람들이 예술을 향유할 때 
+            Art Personality Test는 사람들이 예술을 향유할 때      
             중요하게 여기는 4가지 핵심 요소를 바탕으로 설계했으며,
             총 16가지 Art Personality 유형이 존재합니다.
           </p>

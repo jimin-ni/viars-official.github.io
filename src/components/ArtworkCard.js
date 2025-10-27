@@ -1,11 +1,11 @@
-// src\components\ArtworkCard.js
-
+// src/components/ArtworkCard.js
 import React from "react";
 import "../styles/ArtworkCard.css";
 
 export default function ArtworkCard({
   mainImage,
   artistImage,
+  artistName,
   tag,
   title,
   price,
@@ -13,19 +13,20 @@ export default function ArtworkCard({
 }) {
   return (
     <div className="artwork-card">
-      <div className="artwork-placeholder">
-        <img src={mainImage} alt={title} />
+      <img className="artwork-main" src={mainImage} alt={title} />
+
+      <div className="artist-info">
+        <div className="artist-left">
+          <img className="artist-img" src={artistImage} alt={artistName} />
+          <span className="artist-name">{artistName}</span>
+        </div>
+        <span className="art-tag">{tag}</span>
       </div>
-      <div className="artwork-info">
-        <div className="artwork-top">
-          <img className="artist-img" src={artistImage} alt="artist" />
-          <div className="artwork-tag">{tag}</div>
-        </div>
-        <div className="artwork-title subtitle2">{title}</div>
-        <div className="artwork-bottom">
-          <span className="subtitle2">{price}</span>
-          <div className="count-circle">{count}</div>
-        </div>
+
+      <div className="artwork-details">
+        <div className="artwork-title">{title}</div>
+        <div className="artwork-price">{price}</div>
+        <div className="artwork-count">{count}</div>
       </div>
     </div>
   );
