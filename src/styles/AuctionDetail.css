@@ -1,0 +1,206 @@
+/* src/styles/AuctionDetail.css */
+
+.auction-detail {
+  width: 100%;
+  max-width: 412px;
+  /* margin: 0 auto; */
+  background-color: #FFFF;
+}
+
+/* ===== 상단 네비게이션 ===== */
+.detail-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vw;
+  min-height: 48px;
+  padding: 8px 10px;
+  margin-bottom: 20px;
+}
+.detail-navbar img {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.nav-right {
+  display: flex;
+  gap: 10px;
+}
+
+/* ===== 메인 이미지 ===== */
+.main-img-background {
+  width: 100%;
+  height: 445px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #f0f0f5;
+}
+
+.main-img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* ===== 카운트다운 ===== */
+.timer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 20px;
+  /* padding: 10px; */
+}
+
+.timer .subtitle1 {
+margin: 0;
+}
+
+.border1{
+  border-bottom: 2px solid #f0f0f5;
+}
+
+/* ===== 작품 정보 ===== */
+.art-info {
+  margin: 40px 20px;
+}
+.art-info .subtitle2 {
+  margin-top: 0;
+  margin-bottom: 26px;
+}
+.art-info .subtitle1 {
+  margin-top: 0px;
+  margin-bottom: 40px;
+}
+.info-row {
+  display: flex;
+  justify-content: left;
+  margin: 12px 0;
+}
+
+.info-row .year {
+  margin-left: 45px;
+}
+.info-row .tag {
+  margin-left: 130px;
+}
+
+.info-row .size {
+  margin-left: 40px;
+}
+
+.info-row .material {
+  width: 220px;
+  margin-left: 65px;
+}
+
+.info-row .shipping {
+  margin-left: 24px;
+}
+
+.divider {
+  width: 100%;
+  height: 12px;
+  background: #f0f0f5;
+  margin: 20px 0;
+}
+
+/* ===== 섹션 제목 ===== */
+.section-title {
+  margin: 40px 20px 20px 20px;
+}
+
+.auction-info-row {
+  display: flex;
+  justify-content: left;
+  margin: 20px 0 20px 40px;
+}
+
+.auction-info-row .text3 {
+  margin-right: 100px;
+}
+
+.info-row-value {
+  display: flex;
+  justify-content: left;
+  margin: 0px 0px 40px 40px;
+}
+
+.info-row-value .subtitle2 {
+  margin-right: 60px;
+}
+
+
+/* ===== 텍스트 블록 ===== */
+.auction-text-info-row {
+  margin: 30px 26px 30px 6px ;
+}
+.text3 li {
+  margin-bottom: 6px;
+}
+
+.art-text-info-row {
+  margin: 40px 45px;
+}
+
+/* ===== 서브 이미지 ===== */
+.sub-img {
+  width: 100%;
+  height: 282px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin: 12px 0;
+}
+
+/* ===== 작가 소개 ===== */
+.artist-intro {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  margin: 12px 20px;
+}
+.artist-photo {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
+.artist-bio {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  width: 200px;
+}
+
+
+/* ===== 구매 버튼 ===== */
+.buy-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 85vw;
+  margin: 24px auto;
+  padding: 12px 20px;
+  background: #1d2087;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.buy-left {
+
+}
+.buy-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.buy-right .label {
+  opacity: 0.8;
+}
+.buy-right .price {
+
+}

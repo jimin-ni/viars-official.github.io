@@ -18,7 +18,7 @@ import mypageHoverIcon from "../assets/icons/mypageHover.png";
 const navItems = [
   { id: "home", label: "HOME", icon: homeIcon, iconActive: homeHoverIcon, path: "/home" },
   { id: "docent", label: "DOCENT", icon: docentIcon, iconActive: docentHoverIcon, path: "/docent" },
-  { id: "market", label: "AUCTION", icon: marketIcon, iconActive: marketHoverIcon, path: "/market" },
+  { id: "auction", label: "AUCTION", icon: marketIcon, iconActive: marketHoverIcon, path: "/auction" },
   { id: "article", label: "ARTICLE", icon: articleIcon, iconActive: articleHoverIcon, path: "/article" },
   { id: "myPage", label: "MY PAGE", icon: mypageIcon, iconActive: mypageHoverIcon, path: "/myPage" },
 ];

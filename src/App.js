@@ -16,7 +16,8 @@ import APTOngoing from "./pages/APTOngoing";
 import APTResult from "./pages/APTResult";
 import Home from "./pages/Home";
 import Docent from "./pages/Docent";
-import Market from "./pages/Market";
+import Auction from "./pages/Auction";
+import AuctionDetail from "./pages/AuctionDetail"; // ✅ 추가
 import Article from "./pages/Article";
 import MyPage from "./pages/MyPage";
 import SignUp from "./pages/SignUp";
@@ -28,26 +29,26 @@ function App() {
     <Routes>
       {/* 최초 접속 시 랜딩 페이지 */}
       <Route path="/" element={<Landing />} />
-      {/* 랜딩 페이지 이후 User Type 페이지 */}
+
       <Route path="/usertype" element={<UserType />} />
-      {/* Art Personality Test - Start 페이지 */}
+
       <Route path="/aptStart" element={<APTStart />} />
-      {/* Art Personality Test - Ongoing 페이지 */}
       <Route path="/aptOngoing" element={<APTOngoing />} />
-      {/* 홈 페이지 */}
-      <Route path="/home" element={<Home />} />
-      {/* Docent 도슨트 페이지 */}
-      <Route path="/docent" element={<Docent />} />
-      {/* Market 마켓 페이지 */}
-      <Route path="/market" element={<Market />} />
-      {/* Article 아티클 페이지 */}
-      <Route path="/article" element={<Article />} />
-      {/* MyPage 마이 페이지 */}
-      <Route path="/myPage" element={<MyPage />} />
-      {/* APTResult 테스트 결과 페이지 */}
       <Route path="/result/:type" element={<APTResult />} />
-      {/* signUp 테스트 결과 페이지 */}
+
       <Route path="/signUp" element={<SignUp />} />
+
+      <Route path="/home" element={<Home />} />
+
+      <Route path="/docent" element={<Docent />} />
+
+      <Route path="/auction" element={<Auction />} />
+      <Route path="/auction/:id" element={<AuctionDetail />} /> {/* ✅ 추가 */}
+
+      <Route path="/article" element={<Article />} />
+
+      <Route path="/myPage" element={<MyPage />} />
+
     </Routes>
   </BrowserRouter>
   );
