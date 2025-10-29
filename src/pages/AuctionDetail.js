@@ -214,8 +214,8 @@ useEffect(() => {
       <button className="buy-btn">
         <div className="buy-left">구매하기</div>
         <div className="buy-right">
-          <div className="label">즉시 구매가</div>
-          <div className="price">{art.auctionInfo.estimate}</div>
+          <div className="text3">즉시 구매가</div>
+          <div className="text1">{art.auctionInfo.estimate}</div>
         </div>
       </button>
 

@@ -1,0 +1,45 @@
+/* src\styles\DocentCard.css */
+
+.docent-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  scroll-snap-type: x mandatory;
+  margin: 0;
+  padding: 0;
+}
+
+.docent-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.docent-card {
+  min-width: 42vw;
+  max-width: 170px;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+}
+
+.poster {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: 10px;
+  object-fit: cover;
+  margin-bottom: 2vw;
+}
+
+.docent-tag {
+  background-color: #fff;
+  width: auto;
+  max-width: 128px;
+  border: 2px solid #1D2087;
+  border-radius: 8px;
+  padding: 4px 8px;
+  font-size: clamp(12px, calc(14 / 360 * 100vw), 14px);
+}
+
+
+.docent-info .subtitle3 {
+  margin-top: 4px;
+}

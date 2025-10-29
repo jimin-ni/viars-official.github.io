@@ -1,0 +1,29 @@
+/* src\styles\OpenedDocentCard.css  */
+
+.opened-card {
+  width: 90vw;
+  position: relative;
+}
+
+.opened-img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.opened-texts {
+  position: absolute;
+  bottom: 4px;
+  left: 20px;
+  color: rgb(0, 0, 0);
+}
+
+.opened-texts .subtitle3 {
+  margin: 0px 0px 10px 0px;
+  padding: 0;
+}
+
+.opened-texts .text3 {
+  margin: 6px 0px 6px 0px;
+  padding: 0;
+}

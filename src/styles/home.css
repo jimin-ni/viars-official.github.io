@@ -5,8 +5,10 @@
   position: relative;
   width: 100%;
   max-width: 412px; /* PC에서 최대폭 제한 */
-  margin: 0 auto; /* 중앙 정렬 */
+  /* margin: 0 auto;  */
   overflow-x: hidden; /* PC에서 넘치는 가로 영역 숨김 */
+  /* overflow-y: hidden; */
+
 }
 
 /* ===== 상단 네비게이션 ===== */
@@ -121,11 +123,12 @@
 }
 
 /* ===== 섹션 기본 ===== */
-.section {
-  padding-left: 20px;
+.home .section {
+  /* padding-left: 20px; */
   padding-bottom: 30px;
+  margin-left: 20px;
 }
-.section .subtitle1 {
+.home .section .subtitle1 {
   margin-top: 50px;
   margin-bottom: 25px;
 }
