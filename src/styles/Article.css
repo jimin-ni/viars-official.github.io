@@ -1,0 +1,98 @@
+/* src\styles\Article.css */.Article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100vw;
+  max-width: 412px;
+  height: 10vw;
+  min-height: 48px;
+  background: #ffffff;
+}
+.navbar img {
+  width: 25px;
+  height: 25px;
+  margin-right: 3vw;
+  margin-top: 5vw;
+}
+
+/* Tabs */
+.article-navbar {
+  display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  max-width: 412px;
+  height: 60px;
+  align-items: center;
+}
+.article-tab {
+  color: #cdcdcd;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+}
+.article-tab.active {
+  color: #000;
+}
+.article-tab.active::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background-color: black;
+}
+
+/* Grid */
+.article-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: 10px;
+}
+.article-card {
+  position: relative;
+  width: 90vw;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.article-img {
+  width: 100%;
+  border-radius: 16px;
+}
+.article-tag {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: white;
+  color: black;
+  font-size: 11px;
+  padding: 4px 8px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+.article-title {
+  position: absolute;
+  bottom: 45px;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+}
+.article-subtitle {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-size: 12px;
+  color: #000;
+}

@@ -9,7 +9,7 @@ import cartIcon from "../assets/icons/cart.png";
 import heartIcon from "../assets/icons/heart.png";
 import eventWide from "../assets/images/event-wide.png";
 import NavbarBottom from "../components/NavbarBottom";
-import { artworks } from "../data/artWorkData"; // ✅ 추가
+import { artworks } from "../data/artWorkData"; 
 
 export default function Auction() {
   const [activeTag, setActiveTag] = useState("원화");

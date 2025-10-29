@@ -17,8 +17,9 @@ import APTResult from "./pages/APTResult";
 import Home from "./pages/Home";
 import Docent from "./pages/Docent";
 import Auction from "./pages/Auction";
-import AuctionDetail from "./pages/AuctionDetail"; // ✅ 추가
+import AuctionDetail from "./pages/AuctionDetail";
 import Article from "./pages/Article";
+import ArticleDetail from "./pages/ArticleDetail";
 import MyPage from "./pages/MyPage";
 import SignUp from "./pages/SignUp";
 
@@ -43,9 +44,10 @@ function App() {
       <Route path="/docent" element={<Docent />} />
 
       <Route path="/auction" element={<Auction />} />
-      <Route path="/auction/:id" element={<AuctionDetail />} /> {/* ✅ 추가 */}
+      <Route path="/auction/:id" element={<AuctionDetail />} /> 
 
       <Route path="/article" element={<Article />} />
+      <Route path="/article/:id" element={<ArticleDetail />} />
 
       <Route path="/myPage" element={<MyPage />} />
 
