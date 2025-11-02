@@ -26,37 +26,39 @@ export default function Auction() {
 
   return (
     <div className="Auction">
-      {/* --- Navbar --- */}
-      <div className="navbar">
-        <img className="nav-icon" src={searchIcon} alt="search" />
-        <img className="nav-icon" src={cartIcon} alt="cart" />
-        <img className="nav-icon" src={heartIcon} alt="heart" />
-      </div>
+      <div className="navbar-set">
+        {/* --- Navbar --- */}
+        <div className="navbar">
+          <img className="nav-icon" src={searchIcon} alt="search" />
+          <img className="nav-icon" src={cartIcon} alt="cart" />
+          <img className="nav-icon" src={heartIcon} alt="heart" />
+        </div>
 
-      {/* --- Auction NavBar --- */}
-      <div className="auction-navbar">
-        {statusTabs.map((s) => (
-          <div
-            key={s}
-            className={`auction-tab ${activeStatus === s ? "active" : ""}`}
-            onClick={() => setActiveStatus(s)}
-          >
-            {s}
-          </div>
-        ))}
-      </div>
-
-      {/* --- Tag List --- */}
-      <div className="tag-list">
-        {tags.map((t) => (
-          <div
-            key={t}
-            className={`tag ${activeTag === t ? "active" : ""}`}
-            onClick={() => setActiveTag(t)}
-          >
-            {t}
-          </div>
-        ))}
+        {/* --- Auction NavBar --- */}
+        <div className="auction-navbar">
+          {statusTabs.map((s) => (
+            <div
+              key={s}
+              className={`auction-tab ${activeStatus === s ? "active" : ""}`}
+              onClick={() => setActiveStatus(s)}
+            >
+              {s}
+            </div>
+          ))}
+        </div>
+      
+        {/* --- Tag List --- */}
+        <div className="tag-list">
+          {tags.map((t) => (
+            <div
+              key={t}
+              className={`tag ${activeTag === t ? "active" : ""}`}
+              onClick={() => setActiveTag(t)}
+            >
+              {t}
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* --- Event Image --- */}

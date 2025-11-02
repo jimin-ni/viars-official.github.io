@@ -1,0 +1,84 @@
+.mypage {
+  width: 100vw;
+  max-width: 412px;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+/* 프로필 */
+.profile-section {
+  width: 100%;
+  max-width: 412px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin: 70px 20px 50px 20px;
+  position: relative;
+}
+
+.profile-img {
+  width: 64px;
+  height: 64px;
+  margin: 0;
+  padding: 0;
+}
+
+.mypage .subtitle1 {
+  margin: 0;
+  padding: 0;
+}
+
+.edit-icon {
+  width: 26px;
+  height: 26px;
+  /* position: absolute; */
+  right: 0;
+}
+
+/* 메뉴 전체 */
+.menu-section {
+  display: flex;
+  flex-direction: column;
+  gap: 42px;
+  padding: 0 20px 80px 20px;
+}
+
+/* 각 항목 */
+.menu-item {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 큰 글씨 (제목) */
+.mypage .subtitle3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* 작은 글씨 (하위 항목) */
+.text1 {
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+/* 펼쳐졌을 때 */
+.submenu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 토글 아이콘 */
+.arrow {
+  width: 20px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}

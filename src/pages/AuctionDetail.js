@@ -83,15 +83,15 @@ useEffect(() => {
         <img
           src={backIcon}
           alt="back"
-          className="nav-back"
+          className="nav-icon back"
           onClick={() => navigate(-1)}
         />
-        <div className="nav-right">
-          <img src={searchIcon} alt="search" />
-          <img src={cartIcon} alt="cart" />
-          <img src={heartIcon} alt="heart" />
-        </div>
+        <img src={searchIcon} alt="search" className="nav-icon" />
+        <img src={cartIcon} alt="cart" className="nav-icon" />
+        <img src={heartIcon} alt="heart" className="nav-icon" />
       </div>
+
+
 
       {/* --- 메인 이미지 --- */}
       <div className="main-img-background">
@@ -207,8 +207,6 @@ useEffect(() => {
           <div className="text1">{art.artistBio}</div>
         </div>
       </div>
-
-      <div className="divider"></div>
 
       {/* --- 구매 버튼 --- */}
       <button className="buy-btn">

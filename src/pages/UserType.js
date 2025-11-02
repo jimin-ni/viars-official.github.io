@@ -18,7 +18,7 @@ function UserType() {
     <div className="background">
         <div className="textbox1">
           <p className="title2">반가워요!</p>
-          <p className="text1">viars에는 다양한 아트웍이 있어요!</p>
+          <p className="text1">Viars에는 다양한 아트웍이 있어요!</p>
           <p className="text1"> 둘러보거나 구매하고 싶으신가요?</p>
         </div>
 

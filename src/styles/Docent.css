@@ -8,24 +8,27 @@
 }
 
 .search-bar {
-  width: 82vw;
-  height: 12vw;
+  width: 80vw;
   max-width: 370px;
+  height: 12vw;
   max-height: 54px;
   background-color: #F0F0F5;
   border-radius: 8px;
   display: flex;
   align-items: center;
   padding: 0 12px;
-  margin:  30px 20px 44px 20px;
-  gap: 2vw;
+  /* margin:  30px 20px 44px 20px; */
+  margin: 30px auto;
+  gap: 8px;
 }
 
 .search-bar input {
   flex: 1;
   border: none;
   background: none;
-  font-size: 4vw;
+  font-family: 'Noto Serif', sans-serif;
+  font-weight: 400;
+  font-size: clamp(14px, calc(18 / 360 * 100vw), 18px);
   outline: none;
 }
 

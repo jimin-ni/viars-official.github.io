@@ -1,31 +1,49 @@
 /* src/styles/AuctionDetail.css */
 
 .auction-detail {
-  width: 100%;
+  width: 100vw;
   max-width: 412px;
   /* margin: 0 auto; */
   background-color: #FFFF;
+  margin-bottom: 100px ;
 }
 
 /* ===== 상단 네비게이션 ===== */
-.detail-navbar {
+.auction-detail .detail-navbar {
+  width: 100vw;
+  max-width: 412px;
+  height: 94px;
+
+  position: fixed;
+  top: 0;
+  z-index: 10;
+
+
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center; /* 중앙 정렬 */
   height: 10vw;
   min-height: 48px;
-  padding: 8px 10px;
-  margin-bottom: 20px;
+  padding: 16px 0 16px 0;
+  background-color: #FFFF;
+
 }
-.detail-navbar img {
+
+/* 모든 아이콘 공통 스타일 */
+.nav-icon {
   width: 25px;
   height: 25px;
-  cursor: pointer;
 }
-.nav-right {
-  display: flex;
-  gap: 10px;
+
+/* ✅ 간격 조정 */
+.nav-icon.back {
+  margin-right: 148px; /* 첫 번째~두 번째 사이 */
 }
+
+.nav-icon:not(.back):not(:last-child) {
+  margin-right: 10px; /* 두번째~세번째~네번째 사이 */
+}
+
 
 /* ===== 메인 이미지 ===== */
 .main-img-background {
@@ -159,7 +177,7 @@ margin: 0;
   display: flex;
   align-items: center;
   gap: 26px;
-  margin: 12px 20px;
+  margin: 12px 20px 140px 20px;
 }
 .artist-photo {
   width: 64px;
@@ -178,6 +196,12 @@ margin: 0;
 
 /* ===== 구매 버튼 ===== */
 .buy-btn {
+  position: fixed;              
+  bottom: 24px;                 
+  left: 50%;                    
+  transform: translateX(-50%);  
+  z-index: 10;                 
+
   display: flex;
   justify-content: center;
   align-items: center;

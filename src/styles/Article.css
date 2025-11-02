@@ -1,4 +1,8 @@
-/* src\styles\Article.css */.Article {
+/* src\styles\Article.css */
+
+.Article {
+  width: 100%;
+  max-width: 412px; 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,20 +10,26 @@
 }
 
 /* Navbar */
+.navbar-set {
+  width: 100vw;
+  max-width: 412px;  
+  background: #ffffff;
+  height: 150px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
 .navbar {
   display: flex;
   justify-content: flex-end;
-  width: 100vw;
-  max-width: 412px;
-  height: 10vw;
-  min-height: 48px;
   background: #ffffff;
+
 }
 .navbar img {
   width: 25px;
   height: 25px;
-  margin-right: 3vw;
-  margin-top: 5vw;
+  margin: 30px 20px;
 }
 
 /* Tabs */
@@ -28,8 +38,10 @@
   justify-content: space-around;
   width: 100vw;
   max-width: 412px;
-  height: 60px;
   align-items: center;
+  margin-top: 20px;
+  background: #ffffff;
+
 }
 .article-tab {
   color: #cdcdcd;
@@ -37,6 +49,8 @@
   font-weight: 600;
   cursor: pointer;
   position: relative;
+  transition: color 0.2s ease;
+
 }
 .article-tab.active {
   color: #000;
@@ -48,51 +62,20 @@
   left: 0;
   right: 0;
   height: 3px;
-  background-color: black;
+  background-color: #000;
 }
 
 /* Grid */
 .article-grid {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  margin: 150px auto 48px auto;
   gap: 20px;
-  margin-top: 10px;
+  z-index: 1;
 }
 .article-card {
-  position: relative;
-  width: 90vw;
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: pointer;
+  margin-bottom: 40px;
 }
+
 .article-img {
-  width: 100%;
-  border-radius: 16px;
-}
-.article-tag {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  background: white;
-  color: black;
-  font-size: 11px;
-  padding: 4px 8px;
-  border-radius: 10px;
-  font-weight: 500;
-}
-.article-title {
-  position: absolute;
-  bottom: 45px;
-  left: 20px;
-  font-size: 16px;
-  font-weight: 700;
-  color: #000;
-}
-.article-subtitle {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  font-size: 12px;
-  color: #000;
+  width: 90vw;
+  max-width: 364px;
 }

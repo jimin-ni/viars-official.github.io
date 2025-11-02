@@ -1,7 +1,8 @@
 /* src\styles\OpenedDocentCard.css  */
 
 .opened-card {
-  width: 90vw;
+  width: 100%;
+  max-width: 364px;
   position: relative;
 }
 

@@ -18,7 +18,7 @@ export const rankingData = [
     rank: 2,
     image: rank2,
     tags: ["오디오 도슨트", "오프라인"],
-    title: "워너 브롱크호르스트: 온 세상의 캔버스",
+    title: "워너 브롱크호르스트: 온 세상이 캔버스",
     location: "그라운드시소 서촌",
     date: "2025.03.21 - 05.31",
     views: 102,

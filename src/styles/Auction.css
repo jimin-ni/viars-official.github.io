@@ -9,23 +9,41 @@
 }
 
 /* --- Navbar --- */
+.Auction .navbar-set {
+  width: 100vw;
+  max-width: 412px;  
+  background: #ffffff;
+  height: 220px;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+}
+
 .navbar {
   display: flex;
+  justify-content: flex-end;
+  background: #ffffff;
+
+  /* display: flex;
   justify-content: flex-end;
   width: 100vw;
   max-width: 412px;
   height: 10vw;
   min-height: 48px;
   background: #ffffff;
-  z-index: 100;
+  z-index: 100; */
 }
 
 .navbar img {
   width: 25px;
   height: 25px;
+  margin: 40px 20px;
+
+  /* width: 25px;
+  height: 25px;
   cursor: pointer;
   margin-right: 3vw;
-  margin-top: 5vw;
+  margin-top: 5vw; */
 }
 
 /* --- Auction NavBar --- */
@@ -34,8 +52,17 @@
   justify-content: space-around;
   width: 100vw;
   max-width: 412px;
-  height: 60px;
   align-items: center;
+  margin-top: 20px;
+  background: #ffffff;
+
+
+  /* display: flex;
+  justify-content: space-around;
+  width: 100vw;
+  max-width: 412px;
+  height: 60px;
+  align-items: center; */
 }
 
 .auction-tab {
@@ -45,6 +72,7 @@
   cursor: pointer;
   position: relative;
   transition: color 0.2s ease;
+  margin-bottom: 40px;
 }
 
 .auction-tab.active {
@@ -65,14 +93,16 @@
 
 /* --- Tag List --- */
 .Auction .tag-list {
+  background: #ffffff;
+  color: #ffffff;
   display: flex;
-  justify-content: flex-start; /* 왼쪽 정렬 */
+  justify-content: flex-start; 
   gap: 10px;
-  width: 100%; /* 부모의 폭을 전부 차지해야 왼쪽 정렬이 의미 있음 */
-  max-width: 412px; /* 모바일 기준 맞춤 */
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding-left: 20px; /* 화면 왼쪽에서 10px 떨어지게 */
+  width: 100%; 
+  max-width: 412px; 
+  /* margin-top: 50px; */
+  margin-bottom: 60px;
+  padding-left: 20px; 
   box-sizing: border-box; /* 패딩 포함 계산 */
 }
 
@@ -82,6 +112,7 @@
   height: 5vw;
   max-height: 35px;
   border: 2px solid #1d2087;
+  background-color: #fff;
   color: #1d2087;
   border-radius: 10px;
   padding: 4px 10px;
@@ -101,7 +132,7 @@
 .event-img-wide {
   width: 90vw;
   max-width: 364px;
-  margin: 10px 0;
+  margin: 220px 0 20px 0;
   border-radius: 10px;
 }
 
