@@ -23,6 +23,10 @@ import ArticleDetail from "./pages/ArticleDetail";
 import MyPage from "./pages/MyPage";
 import SignUp from "./pages/SignUp";
 
+import ExhibitionDetail from "./pages/ExhibitionDetail";
+import DocentPlayer from "./pages/DocentPlayer";
+
+
 function App() {
   return (
     <BrowserRouter>
@@ -50,6 +54,9 @@ function App() {
       <Route path="/article/:id" element={<ArticleDetail />} />
 
       <Route path="/myPage" element={<MyPage />} />
+
+      <Route path="/exhibition/:id" element={<ExhibitionDetail />} />
+      <Route path="/docent/:id" element={<DocentPlayer />} />
 
     </Routes>
   </BrowserRouter>

@@ -29,8 +29,11 @@ import eventImg from "../assets/images/event.png";
 
 import NavbarBottom from "../components/NavbarBottom"; 
 
+import { useNavigate } from "react-router-dom";
+import { getExhibitionById } from "../data/ExhibitionData";
 
 function Home() {
+  const navigate = useNavigate();
   const [activeSlide, setActiveSlide] = useState(0);
   const slides = [post1, post2, post3, post4, post5];
   const bannerRef = useRef(null);
@@ -56,6 +59,7 @@ function Home() {
       title: "2025 아시아프",
       place: "문화역서울284",
       date: "2025.08.12 - 09.07",
+      exhibitionId: "asyaaf-2025",
     },
     {
       img: recommend2,
@@ -63,6 +67,7 @@ function Home() {
       title: "Magic For Love",
       place: "서울시립미술관",
       date: "2025.09.10 - 11.20",
+      exhibitionId: "magic-for-love",
     },
     {
       img: recommend3,
@@ -70,6 +75,7 @@ function Home() {
       title: "The Radiance",
       place: "리움미술관",
       date: "2025.07.01 - 10.12",
+      exhibitionId: "radiance"
     },
   ];
 
@@ -179,7 +185,15 @@ function Home() {
         <div className="subtitle1">춤추는 라마님을 위한 전시회</div>
         <div className="scroll-row">
           {recommendCards.map((rec, i) => (
-            <div className="recommend-card" key={i}>
+            // <div className="recommend-card" key={i}>
+            <div
+              className="recommend-card"
+              key={i}
+              onClick={() => navigate(`/exhibition/${rec.exhibitionId}`, {
+                state: { exhibition: getExhibitionById(rec.exhibitionId) }
+              })}
+              style={{ cursor: "pointer" }}
+            >
               <img src={rec.img} alt={`recommend ${i + 1}`} className="poster" />
               <div className="recommend-info">
                 <div className="tag-row">

@@ -28,6 +28,7 @@ const APTResultData = {
       location: "문화역서울284",
       date: "2025.08.12 - 2025.09.07",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025"
     },
 
     artists: [
@@ -67,6 +68,7 @@ const APTResultData = {
       location: "리움 미술관",
       date: "2025.02.27 - 2025.07.06",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025"
     },
 
     artists: [
@@ -106,6 +108,7 @@ const APTResultData = {
       location: "화이트큐브 서울 ",
       date: "2025.06.26 - 2025.08.09",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025"
     },
 
     artists: [
@@ -145,6 +148,7 @@ const APTResultData = {
       location: "서울시립미술관 등",
       date: "2025.08.26 - 2025.11.23",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025"
     },
 
     artists: [
@@ -184,6 +188,7 @@ const APTResultData = {
       location: "G Gallery 서울",
       date: "2025.06.25 - 2025.07.26",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
     },
 
     artists: [
@@ -223,6 +228,7 @@ const APTResultData = {
       location: "서울시립 사진미술관",
       date: "2025.05.29 - 2025.10.12",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
     },
 
     artists: [
@@ -262,6 +268,7 @@ const APTResultData = {
       location: "그라운드시소 서촌",
       date: "2025.05.21 - 2025.09.14",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
     },
 
     artists: [
@@ -301,6 +308,8 @@ const APTResultData = {
       location: "페이스 갤러리",
       date: "2025.06.14 - 2025.09.27",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
+
     },
 
     artists: [
@@ -340,6 +349,8 @@ const APTResultData = {
       location: "MMCA 과천",
       date: "2025.06.26 - 2027.06.27",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
+
     },
 
     artists: [
@@ -379,6 +390,7 @@ const APTResultData = {
       location: "DDP",
       date: "2025.04.19 - 2025.07.13",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
     },
 
     artists: [
@@ -457,6 +469,7 @@ const APTResultData = {
       location: "서울시립미술관",
       date: "2025.03.20 - 2025.10.26",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
     },
 
     artists: [
@@ -496,6 +509,7 @@ const APTResultData = {
       location: "서울도시건축전시관",
       date: "2024.10.02 - 2024.10.29",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
     },
 
     artists: [
@@ -535,6 +549,7 @@ const APTResultData = {
       location: "THEO Gellary",
       date: "2025.06.26 - 2025.07.26",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
     },
 
     artists: [
@@ -613,6 +628,7 @@ const APTResultData = {
       location: "MPX갤러리",
       date: "2025.02.27 - 2025.05.18",
       tags: ["오디오 도슨트", "오프라인"],
+      exhibitionId: "asyaaf-2025",
     },
 
     artists: [

@@ -1,0 +1,70 @@
+/* src/styles/ExhibitionDetail.css */
+.exh-detail{
+    width:100vw;
+    max-width:412px;
+    margin:0 auto;
+}
+
+.poster-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.poster-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* 포스터 위에 겹치는 본문 박스 */
+.body {
+  position: absolute;
+  top: 320px;
+  left: 0;
+  width: 100%;
+  height: 520px;
+  background: #ffffff;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  overflow-y: auto;
+}
+
+.body-inner {
+  padding: 0;
+  margin: 0;
+}
+
+.body-inner .subtitle1{
+  margin-left: 20px;
+}
+
+.body-inner .text1{
+  margin-left: 20px;
+}
+
+.section{
+    margin:18px 20px;
+    height: auto;
+}
+
+.quick-actions{
+    display:flex;
+    justify-content:space-around;
+    padding:18px 0;
+    height: auto;
+}
+
+.action{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+    background:none;
+    border:none;
+
+}
+
+.action img{
+    width:90px;height:auto;
+}

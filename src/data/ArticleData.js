@@ -22,7 +22,7 @@ import meenaDetail1 from "../assets/images/article/Detail2_parkmeena.png";
 import meenaDetail2 from "../assets/images/article/Detail3_parkmeena.png";
 
 import service1 from "../assets/images/article/service1.png";
-import service1Poster from "../assets/images/article/Detail2_service1.png";
+import service1Poster from "../assets/images/article/Detail_service1.png";
 import service1Detail1 from "../assets/images/article/Detail2_service1.png";
 import service1Detail2 from "../assets/images/article/Detail3_service1.png";
 import service1Detail3 from "../assets/images/article/Detail4_service1.png";

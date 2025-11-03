@@ -11,8 +11,12 @@ import scanIcon from "../assets/icons/scan.png";
 
 import NavbarBottom from "../components/NavbarBottom"; 
 
+import { useNavigate } from "react-router-dom";
+import { getExhibitionById } from "../data/ExhibitionData";
 
 export default function Docent() {
+  const navigate = useNavigate();
+
   return (
     <div className="docent">
       {/* 검색창 */}
@@ -25,7 +29,10 @@ export default function Docent() {
       {/* 가까운 전시 도슨트 */}
       <section className="section">
         <div className="subtitle1">가장 가까운 전시 도슨트</div>
-        <DocentCard /> {/* ✅ 데이터 기반 자동 렌더링 */}
+        {/* <DocentCard /> */}
+        <div onClick={() => navigate("/exhibition/asyaaf-2025", { state: { exhibition: getExhibitionById("asyaaf-2025") } })}>
+           <DocentCard />
+        </div>
       </section>
 
       {/* 새로 오픈한 도슨트 */}

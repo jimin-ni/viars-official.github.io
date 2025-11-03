@@ -1,0 +1,46 @@
+/* src/styles/DocentPlayer.css */
+.docent-player{
+    width:100vw;max-width:412px;margin:0 auto;min-height:100vh;position:relative;background:#fff;
+}
+.dp-navbar{
+    height:56px;display:flex;align-items:center;justify-content:space-between;padding:0 12px;position:sticky;top:0;background:linear-gradient(#fff,rgba(255,255,255,.6),transparent);z-index:10
+}
+.dp-navbar img{
+    width:24px;height:24px
+}
+.dp-title{
+    display:flex;flex-direction:column;align-items:center;gap:2px
+}
+.dp-cover{
+    padding:16px
+}
+.dp-cover img{
+    width:100%;border-radius:10px
+}
+.dp-seek{
+    padding:0 18px
+}
+.dp-seek input{
+    width:100%
+}
+.dp-time{
+    display:flex;justify-content:flex-end;gap:8px;font-size:12px;margin-top:4px
+}
+.dp-controls{
+    display:flex;justify-content:space-around;align-items:center;padding:18px 0
+}
+.dp-controls img{
+    width:28px;height:28px
+}
+.dp-controls .play img{
+    width:56px;height:56px
+}
+.dp-lang{
+    position:fixed;right:18px;bottom:24px;border:none;background:#fff;border-radius:999px;box-shadow:0 4px 16px rgba(0,0,0,.12);width:48px;height:48px;display:flex;align-items:center;justify-content:center
+}
+.dp-caption{
+    position:fixed;left:0;right:0;bottom:0;padding:18px;background:rgba(255,255,255,.7);backdrop-filter: blur(10px);
+}
+.dp-caption-inner{
+    max-width:412px;margin:0 auto;padding:0 16px 8px;font-size:14px
+}

@@ -17,10 +17,17 @@ function APTResult() {
 
   if (!result) return <div>결과 데이터를 불러올 수 없습니다.</div>;
 
-  const handleClick = () => {
+  // const handleClick = () => {
+  //   setTimeout(() => {
+  //     navigate("/Home");
+  //   }, 900);
+  // };
+
+ const handleClick = () => {
+    const exId = result.exhibition.exhibitionId; 
     setTimeout(() => {
-      navigate("/Home");
-    }, 900);
+      navigate(`/exhibition/${exId}`);
+    }, 600);
   };
 
   // ✅ 공유 버튼 클릭 시 실행
