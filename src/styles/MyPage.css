@@ -61,7 +61,7 @@
 }
 
 /* 작은 글씨 (하위 항목) */
-.text1 {
+.mypage .text1 {
   margin-left: 30px;
   margin-top: 20px;
 }
@@ -70,6 +70,11 @@
 .submenu {
   display: flex;
   flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* 토글 아이콘 */

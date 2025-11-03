@@ -106,7 +106,7 @@
   box-sizing: border-box; /* 패딩 포함 계산 */
 }
 
-.tag {
+.Auction .tag {
   width: 12vw;
   max-width: 73px;
   height: 5vw;

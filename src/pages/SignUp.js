@@ -2,6 +2,8 @@
 
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+
 import '../styles/Global.css'; 
 import '../styles/Landing.css'; 
 import '../styles/SignUp.css'; 
@@ -71,7 +73,7 @@ function SignUp() {
         </div>
 
         <div className="signUpMore">
-            <div className="text1">계정이 있어요  |  계정 없이 둘러볼래요</div>
+            <div className="text1"><Link to="/home">계정이 있어요  |  계정 없이 둘러볼래요</Link></div>
              
         </div>
     </div>

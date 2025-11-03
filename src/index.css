@@ -12,7 +12,7 @@ body {
 #root {
   width: 100%;
   max-width: 412px;          /* 모바일 폭 고정 */
-  min-height: 100vh;         /* 브라우저 창 전체 높이 */
+  min-height: 100vh;        
   background-color: #fff;    /* 흰색 박스 */
   display: flex;             /* 내부에서 flex 정렬 가능 */
   margin: 0;

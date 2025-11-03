@@ -1,10 +1,15 @@
 // src\pages\MyPage.js
 
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
+
 import "../styles/MyPage.css";
 import editIcon from "../assets/icons/edit.png";
 import toggleIcon from "../assets/icons/toggle.png"; // ✅ 토글 이미지 추가
 import profileImg from "../assets/images/profile.png";
+
+import NavbarBottom from "../components/NavbarBottom";
+
 
 export default function MyPage() {
   const [activeMenu, setActiveMenu] = useState(null);
@@ -34,6 +39,14 @@ export default function MyPage() {
               className={`arrow ${activeMenu === "apt" ? "open" : ""}`}
             />
           </div>
+          {activeMenu === "apt" && (
+            <div className="submenu">
+              <div className="text1">
+                <Link to="/APTStart">테스트 다시 하기</Link>
+              </div>
+            </div>
+          )}
+
         </div>
 
         {/* WALLET */}
@@ -75,16 +88,14 @@ export default function MyPage() {
 
         {/* 작품 판매 문의 */}
         <div className="menu-item">
-          <div className="subtitle3" onClick={() => toggleMenu("contact")}>
+          <div className="subtitle3">
             작품 판매 문의
-            <img
-              src={toggleIcon}
-              alt="toggle"
-              className={`arrow ${activeMenu === "contact" ? "open" : ""}`}
-            />
           </div>
-        </div>
+
       </div>
+      <NavbarBottom />
+      
     </div>
+  </div>
   );
 }
